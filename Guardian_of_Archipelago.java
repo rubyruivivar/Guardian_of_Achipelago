@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Guardian_of_Archipelago {
+public class GuardianOfArchipelago {
     static Scanner scan = new Scanner(System.in);
 
     public static void Introduction() {
@@ -14,7 +14,7 @@ public class Guardian_of_Archipelago {
             if (i == 0) {
                 System.out.println("\t\t\t\t***********************");
                 System.out.println("\t\t\t\t*                     *");
-                System.out.println("\t\t\t\t*   " + islands[i] + "   *");
+                System.out.println("\t\t\t\t *     " + islands[i] + "    *");
                 System.out.println("\t\t\t\t*                     *");
                 System.out.println("\t\t\t\t***********************\n");
                 System.out.println("\n\n");
@@ -122,5 +122,6 @@ public class Guardian_of_Archipelago {
                 	System.out.println("Invalid input. Enter the number that are listed in the option only.");
             }
         }
+        scan.close();
     }
 }
