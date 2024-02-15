@@ -2,22 +2,101 @@ import java.util.Scanner;
 import java.util.Random;
 import java.util.Arrays;
 
+class Map{
+    public static void map() {
+    System.out.println("\nMAP\n");
+    String[] islands = { "Imber Cove", "Autumnvale ", "Frostpeak", "Kindlewood ", "Aquaville", "Celestial Shores" };
+    for (int i = 0; i < islands.length; i++) {
+        if (i == 0) {
+            System.out.println("\t\t\t\t\t\t\t       You're here!\n");
+            System.out.println("\t\t\t\t\t\t\t *********************"); // Imber Cove
+            System.out.println("\t\t\t\t\t\t\t *                     *");
+            System.out.println("\t\t\t\t ------------------------*     " + islands[i] + "      * -----------------------");
+            System.out.println("\t\t\t\t|\t\t\t *                     *\t\t\t|");
+            System.out.println("\t\t\t\t|\t\t\t ***********************\t\t\t|");
+            System.out.print("\t\t\t\t|\t\t\t\t\t\t\t\t\t|\n\t\t\t\tv\t\t\t\t\t\t\t\t\t|\n");
+
+        } else if (i == 5) {
+            System.out.println("\t\t\t\t|\t\t\t ***********************\t\t\t|"); // Celestial Shores
+            System.out.println("\t\t\t\t|\t\t\t *                     *\t\t\t|");
+            System.out.println("\t\t\t\t ----------------------> *   " + islands[i] + "  * <----------------------");
+            System.out.println("\t\t\t\t\t\t\t *                     *");
+            System.out.println("\t\t\t\t\t\t\t *********************");
+
+        } else if (i % 2 == 0) {
+            System.out.println("\t\t\t\t|\t\t\t\t\t  -------\t     *********************"); // Aquaville and Frostpeak
+            System.out.println("\t\t\t\t|\t\t\t\t\t        -------      *                     *");
+            System.out.println("\t\t\t\t|\t\t\t\t\t\t      ------ *      " + islands[i] + "      *");
+            System.out.println("\t\t\t\t|\t\t\t\t\t\t\t     *                     *");
+            System.out.println("\t\t\t\t|\t\t\t\t\t\t\t     ***********************\n\t\t\t\t|\t\t\t\t\t\t\t\t\t|\n\t\t\t\t|\t\t\t\t\t\t\t\t\t|");
+
+        } else {
+            System.out.println("\t\t     ***********************\t\t\t\t\t\t\t\t|"); // Autumnvale and Kindlewood
+            System.out.println("\t\t     *                     *\t\t\t\t\t\t\t\t|");
+            System.out.println("\t\t     *     " + islands[i] + "     * ------\t\t\t\t\t\t\t|");
+            System.out.println("\t\t     *                     *      -------\t\t\t\t\t\t|");
+            System.out.println("\t\t     ***********************\t\t-------\t\t\t\t\t\t|\n\t\t\t\t|\t\t\t      ------\t\t\t\t\t|\n\t\t\t\t|\t\t\t\t    ------\t\t\t\t|");
+            }
+        }
+    }
+}
+
 class Routes {
-    public static String[] getPossibleRoutes(int islandIndex) {
+    public static String[] routesImberCove(int islandIndex1) { // from Imber Cove
+    // Define and return possible routes based on the island index
+    String[][] allRoutes1 = {
+            { "Imber Cove ---> Autumnvale", "Imber Cove ---> Frostpeak ---> Autumnvale",
+                    "Imber Cove ---> Frostpeak ---> Aquaville ---> Kindlewood ---> Autumnvale" },
+            { "Imber Cove ---> Frostpeak", "Imber Cove ---> Autumnvale ---> Frostpeak",
+                    "Imber Cove ---> Autumnvale ---> Kindlewood ---> Aquaville ---> Frostpeak" },
+            { "Imber Cove ---> Autumnvale ---> Kindlewood",
+                    "Imber Cove ---> Frostpeak ---> Autumnvale ---> Kindlewood",
+                    "Imber Cove ---> Frostpeak ---> Aquaville ---> Kindlewood" },
+            { "Imber Cove ---> Frostpeak ---> Aquaville",
+                    "Imber Cove ---> Autumnvale ---> Frostpeak ---> Aquaville",
+                    "Imber Cove ---> Autumnvale ---> Kindlewood ---> Aquaville" }
+    };
+    return allRoutes1[islandIndex1 - 1];
+}
+
+    public static String[] routesAutumnvale(int islandIndex2) { // from Autumnvale
         // Define and return possible routes based on the island index
-        String[][] allRoutes = {
-                { "Imber Cove ---> Autumnvale", "Imber Cove ---> Frostpeak ---> Autumnvale",
-                        "Imber Cove ---> Frostpeak ---> Aquaville ---> Kindlewood ---> Autumnvale" },
-                { "Imber Cove ---> Frostpeak", "Imber Cove ---> Autumnvale ---> Frostpeak",
-                        "Imber Cove ---> Autumnvale ---> Kindlewood ---> Aquaville ---> Frostpeak" },
-                { "Imber Cove ---> Autumnvale ---> Kindlewood",
-                        "Imber Cove ---> Frostpeak ---> Autumnvale ---> Kindlewood",
-                        "Imber Cove ---> Frostpeak ---> Aquaville ---> Kindlewood" },
-                { "Imber Cove ---> Frostpeak ---> Aquaville",
-                        "Imber Cove ---> Autumnvale ---> Frostpeak ---> Aquaville",
-                        "Imber Cove ---> Autumnvale ---> Kindlewood ---> Aquaville" }
+        String[][] allRoutes2 = {
+                { "Autumnvale ---> Frostpeak", "Autumnvale ---> Kindlewood ---> Aquaville ---> Frostpeak" },
+                { "Autumnvale ---> Kindlewood", "Autumnvale ---> Frostpeak ---> Aquaville ---> Kindlewood" },
+                { "Autumnvale ---> Frostpeak ---> Aquaville", "Autumnvale ---> Kindlewood ---> Aquaville" },
         };
-        return allRoutes[islandIndex - 1];
+        return allRoutes2[islandIndex2 - 1];
+    }
+    
+    public static String[] routesFrostpeak(int islandIndex3) { // from Frostpeak
+        // Define and return possible routes based on the island index
+        String[][] allRoutes3 = {
+            { "Frostpeak ---> Autumnvale", "Frostpeak ---> Aquaville ---> Kindlewood ---> Autumnvale" },
+            { "Frostpeak ---> Autumnvale ---> Kindlewood", "Frostpeak ---> Aquaville ---> Kindlewood" },
+            { "Frostpeak ---> Aquaville", "Frostpeak ---> Autumnvale ---> Kindlewood ---> Aquaville" },
+        };
+        return allRoutes3[islandIndex3 - 1];
+    }
+    
+    public static String[] routesKindlewood(int islandIndex4) { //from Kindlewood
+        // Define and return possible routes based on the island index
+        String[][] allRoutes4 = {
+            { "Kindlewood ---> Autumnvale", "Kindlewood ---> Aquaville ---> Frostpeak ---> Autumnvale" },
+            { "Kindlewood ---> Autumnvale ---> Frostpeak", "Kindlewood ---> Aquaville ---> Frostpeak" },
+            { "Kindlewood ---> Aquaville", "Kindlewood ---> Autumnvale ---> Frostpeak ---> Aquaville" },
+        };
+        return allRoutes4[islandIndex4 - 1];
+    }
+    
+    public static String[] routesAquaville(int islandIndex5) { //from Aquaville
+        // Define and return possible routes based on the island index
+        String[][] allRoutes5 = {
+            { "Aquaville ---> Frostpeak ---> Autumnvale", "Aquaville ---> Kindlewood ---> Autumnvale" },
+            { "Aquaville ---> Frostpeak", "Aquaville ---> Kindlewood ---> Autumnvale ---> Frostpeak" },
+            { "Aquaville ---> Kindlewood", "Aquaville ---> Frostpeak ---> Autumnvale ---> Kindlewood" },
+        };
+        return allRoutes5[islandIndex5 - 1];
     }
 }
 
@@ -30,48 +109,6 @@ public class GuardianofArchipelago {
         System.out.println(" * Save all the stranded tourists who scattered in different islands");
         System.out.println(" * Overcome the obstacles by answering the random general questions and riddles");
         System.out.println(" * Bring the tourists back home (Celestial Shores)");
-    }
-
-    public static void Map() {
-        System.out.println("\nMAP\n");
-        String[] islands = { "Imber Cove", "Autumnvale ", "Frostpeak", "Kindlewood ", "Aquaville", "Celestial Shores" };
-        for (int i = 0; i < islands.length; i++) {
-            if (i == 0) {
-                System.out.println("\t\t\t\t\t\t\t       You're here!\n");
-                System.out.println("\t\t\t\t\t\t\t *********************"); // Imber Cove
-                System.out.println("\t\t\t\t\t\t\t *                     *");
-                System.out.println(
-                        "\t\t\t\t ------------------------*     " + islands[i] + "      * -----------------------");
-                System.out.println("\t\t\t\t|\t\t\t *                     *\t\t\t|");
-                System.out.println("\t\t\t\t|\t\t\t ***********************\t\t\t|");
-                System.out.print("\t\t\t\t|\t\t\t\t\t\t\t\t\t|\n\t\t\t\tv\t\t\t\t\t\t\t\t\t|\n");
-
-            } else if (i == 5) {
-                System.out.println("\t\t\t\t|\t\t\t ***********************\t\t\t|"); // Celestial Shores
-                System.out.println("\t\t\t\t|\t\t\t *                     *\t\t\t|");
-                System.out
-                        .println("\t\t\t\t ----------------------> *   " + islands[i] + "  * <----------------------");
-                System.out.println("\t\t\t\t\t\t\t *                     *");
-                System.out.println("\t\t\t\t\t\t\t *********************");
-
-            } else if (i % 2 == 0) {
-                System.out.println("\t\t\t\t|\t\t\t\t\t  -------\t     *********************"); // Aquaville and
-                                                                                                  // Frostpeak
-                System.out.println("\t\t\t\t|\t\t\t\t\t        -------      *                     *");
-                System.out.println("\t\t\t\t|\t\t\t\t\t\t      ------ *      " + islands[i] + "      *");
-                System.out.println("\t\t\t\t|\t\t\t\t\t\t\t     *                     *");
-                System.out.println(
-                        "\t\t\t\t|\t\t\t\t\t\t\t     ***********************\n\t\t\t\t|\t\t\t\t\t\t\t\t\t|\n\t\t\t\t|\t\t\t\t\t\t\t\t\t|");
-
-            } else {
-                System.out.println("\t\t     ***********************\t\t\t\t\t\t\t\t|");
-                System.out.println("\t\t     *                     *\t\t\t\t\t\t\t\t|");
-                System.out.println("\t\t     *     " + islands[i] + "     * ------\t\t\t\t\t\t\t|");
-                System.out.println("\t\t     *                     *      -------\t\t\t\t\t\t|");
-                System.out.println(
-                        "\t\t     ***********************\t\t-------\t\t\t\t\t\t|\n\t\t\t\t|\t\t\t      ------\t\t\t\t\t|\n\t\t\t\t|\t\t\t\t    ------\t\t\t\t|");
-            }
-        }
     }
 
     public static void checkList() {
@@ -123,20 +160,18 @@ public class GuardianofArchipelago {
         }
     }
 
-    
-
-    public static void displayRoutes(int islandIndex) {
+    public static void displayRoutes(int islandIndex1) {
         Routes Routes = new Routes();
         
         System.out.println("\nPossible routes from your current location:");
-        String[] routes = Routes.getPossibleRoutes(islandIndex);
+        String[] routes = Routes.routesImberCove(islandIndex1);
         int numRoutes = routes.length;
 
         int[] distances = new int[numRoutes];
 
         // Generate distances based on index with increasing values
         for (int i = 0; i < numRoutes; i++) {
-            distances[i] = random.nextInt(81) + 10; // Distance range: 10-100 km, increasing with index
+            distances[i] = random.nextInt(81) + 10; // Distance range: 10-90 km, increasing with index
         }
 
         // Sort distances array to ensure increasing order
@@ -161,7 +196,7 @@ public class GuardianofArchipelago {
                 "Shortest Route: (" + (shortestRouteIndex + 1) + ") Distance: " + distances[shortestRouteIndex] + " meter - " + routes[shortestRouteIndex]);
         System.out.print("\nEnter the number of the route you want to take from the options: ");
         int chosenRoutes = scan.nextInt();
-        System.out.println("You choose this routes: (" + chosenRoutes + ") " + distances[chosenRoutes - 1] + " meter - " + routes[chosenRoutes - 1]);
+        System.out.println("The route you choose is: (" + chosenRoutes + ") " + distances[chosenRoutes - 1] + " meter - " + routes[chosenRoutes - 1]);
     }
 
     public static void main(String[] args) {
@@ -177,7 +212,8 @@ public class GuardianofArchipelago {
             switch (YN) {
                 case 1:
                     continueProgram = false;
-                    Map();
+                    Map Map = new Map();
+                    Map.map();
                     checkList();
                     Islands();
                     break;
