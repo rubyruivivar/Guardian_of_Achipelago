@@ -3,43 +3,44 @@ import java.util.Random;
 import java.util.Arrays;
 
 class Map{
-    public static void map() {
-    System.out.println("\nMAP\n");
-    String[] islands = { "Imber Cove", "Autumnvale ", "Frostpeak", "Kindlewood ", "Aquaville", "Celestial Shores" };
-    for (int i = 0; i < islands.length; i++) {
-        if (i == 0) {
-            System.out.println("\t\t\t\t\t\t\t       You're here!\n");
-            System.out.println("\t\t\t\t\t\t\t *********************"); // Imber Cove
-            System.out.println("\t\t\t\t\t\t\t *                     *");
-            System.out.println("\t\t\t\t ------------------------*     " + islands[i] + "      * -----------------------");
-            System.out.println("\t\t\t\t|\t\t\t *                     *\t\t\t|");
-            System.out.println("\t\t\t\t|\t\t\t ***********************\t\t\t|");
-            System.out.print("\t\t\t\t|\t\t\t\t\t\t\t\t\t|\n\t\t\t\tv\t\t\t\t\t\t\t\t\t|\n");
-
-        } else if (i == 5) {
-            System.out.println("\t\t\t\t|\t\t\t ***********************\t\t\t|"); // Celestial Shores
-            System.out.println("\t\t\t\t|\t\t\t *                     *\t\t\t|");
-            System.out.println("\t\t\t\t ----------------------> *   " + islands[i] + "  * <----------------------");
-            System.out.println("\t\t\t\t\t\t\t *                     *");
-            System.out.println("\t\t\t\t\t\t\t *********************");
-
-        } else if (i % 2 == 0) {
-            System.out.println("\t\t\t\t|\t\t\t\t\t  -------\t     *********************"); // Aquaville and Frostpeak
-            System.out.println("\t\t\t\t|\t\t\t\t\t        -------      *                     *");
-            System.out.println("\t\t\t\t|\t\t\t\t\t\t      ------ *      " + islands[i] + "      *");
-            System.out.println("\t\t\t\t|\t\t\t\t\t\t\t     *                     *");
-            System.out.println("\t\t\t\t|\t\t\t\t\t\t\t     ***********************\n\t\t\t\t|\t\t\t\t\t\t\t\t\t|\n\t\t\t\t|\t\t\t\t\t\t\t\t\t|");
-
-        } else {
-            System.out.println("\t\t     ***********************\t\t\t\t\t\t\t\t|"); // Autumnvale and Kindlewood
-            System.out.println("\t\t     *                     *\t\t\t\t\t\t\t\t|");
-            System.out.println("\t\t     *     " + islands[i] + "     * ------\t\t\t\t\t\t\t|");
-            System.out.println("\t\t     *                     *      -------\t\t\t\t\t\t|");
-            System.out.println("\t\t     ***********************\t\t-------\t\t\t\t\t\t|\n\t\t\t\t|\t\t\t      ------\t\t\t\t\t|\n\t\t\t\t|\t\t\t\t    ------\t\t\t\t|");
+    public static void map1() {
+        System.out.println("\nMAP\n");
+        String[] islands = { "Imber Cove", "Autumnvale ", "Frostpeak", "Kindlewood ", "Aquaville", "Celestial Shores" };
+        for (int i = 0; i < islands.length; i++) {
+            if (i == 0) {
+                System.out.println("\t\t\t\t\t\t\t       You're here!\n");
+                System.out.println("\t\t\t\t\t\t\t ***********************"); // Imber Cove
+                System.out.println("\t\t\t\t\t\t\t *                     *");
+                System.out.println("\t\t\t\t ------------------------*     " + islands[i] + "      * -----------------------");
+                System.out.println("\t\t\t\t|\t\t\t *                     *\t\t\t|");
+                System.out.println("\t\t\t\t|\t\t\t ***********************\t\t\t|");
+                System.out.print("\t\t\t\t|\t\t\t\t\t\t\t\t\t|\n\t\t\t\tv\t\t\t\t\t\t\t\t\t|\n");
+    
+            } else if (i == 5) {
+                System.out.println("\t\t\t\t|\t\t\t ***********************\t\t\t|"); // Celestial Shores
+                System.out.println("\t\t\t\t|\t\t\t *                     *\t\t\t|");
+                System.out.println("\t\t\t\t ----------------------> *   " + islands[i] + "  * <----------------------");
+                System.out.println("\t\t\t\t\t\t\t *                     *");
+                System.out.println("\t\t\t\t\t\t\t ***********************");
+    
+            } else if (i % 2 == 0) {
+                System.out.println("\t\t\t\t|\t\t\t\t\t  -------\t     ***********************"); // Aquaville and Frostpeak
+                System.out.println("\t\t\t\t|\t\t\t\t\t        -------      *                     *");
+                System.out.println("\t\t\t\t|\t\t\t\t\t\t      ------ *      " + islands[i] + "      *");
+                System.out.println("\t\t\t\t|\t\t\t\t\t\t\t     *                     *");
+                System.out.println("\t\t\t\t|\t\t\t\t\t\t\t     ***********************\n\t\t\t\t|\t\t\t\t\t\t\t\t\t|\n\t\t\t\t|\t\t\t\t\t\t\t\t\t|");
+    
+            } else {
+                System.out.println("\t\t     ***********************\t\t\t\t\t\t\t\t|"); // Autumnvale and Kindlewood
+                System.out.println("\t\t     *                     *\t\t\t\t\t\t\t\t|");
+                System.out.println("\t\t     *     " + islands[i] + "     * ------\t\t\t\t\t\t\t|");
+                System.out.println("\t\t     *                     *      -------\t\t\t\t\t\t|");
+                System.out.println("\t\t     ***********************\t\t-------\t\t\t\t\t\t|\n\t\t\t\t|\t\t\t      ------\t\t\t\t\t|\n\t\t\t\t|\t\t\t\t    ------\t\t\t\t|");
             }
         }
     }
 }
+
 
 class Routes {
     public static String[] routesImberCove(int islandIndex1) { // from Imber Cove
@@ -175,11 +176,12 @@ class QuizGame {
 
         String[] defaultAnswers = {"PARIS", "WILLIAM SHAKESPEARE", "100", "JAPAN", "MARS", "CONSTELLATION", "ANTARCTICA", "SNOW WHITE", "ALBERT EINSTEIN", "LEONARDO DA VINCI", "ARIEL", "GIRAFFE", "AUTUMN/FALL", "CHAMELEON", "CINDERELLA", "BLUE", "OLD MACDONALD", "PARROT", "WEB BROWSERS", "NEUTRON", "K", "WEATHER", "VENUS", "EARTHQUAKES", "OYSTERS", "JUPITER", "LEONARDO DICAPRIO", "SPONGEBOB SQUAREPANTS", "COCA-COLA", "STAIRCASE", "NEEDLE", "LIBRARY", "E", "LIGHT", "PALM", "STARS", "ROAD", "BIRTHDAY CANDLE", "BATTERY", "MUSHROOM", "POPCORN", "KEYBOARD", "CARROT", "FIRE", "DECK OF CARDS", "RELATIONSHIP", "INCORRECTLY", "ENVELOPE", "GOLDFISH", "SHORT", "CLOCK", "PIANO", "SHADOW", "TOWEL", "COIN", "SPONGE", "COMB", "BED", "REFRIGERATOR",
         };
-
+        
+        this.scan = new Scanner(System.in);
+        this.random = new Random();
         this.questions = defaultQuestions;
         this.answers = defaultAnswers;
-        this.random = new Random();
-        this.scan = new Scanner(System.in);
+        
     }
 
     public String getRandomQuestion() {
@@ -188,7 +190,7 @@ class QuizGame {
     }
 
     public boolean checkAnswer(String userAnswer, int questionIndex) {
-        return userAnswer.equalsIgnoreCase(answers[questionIndex]);
+        return userAnswer.equals(answers[questionIndex]);
     }
 
     public void startTimer(int seconds) {
@@ -198,7 +200,7 @@ class QuizGame {
                 try {
                     Thread.sleep(1000);
                 } catch (InterruptedException e) {
-                    System.out.println("\nTimer stopped.");
+                    System.out.println("\n");
                     return;
                 }
             }
@@ -244,35 +246,40 @@ public class GuardianofArchipelago {
     }
 
     public static void Destination(String[] locations) {
-        System.out.print(
-                "\nIslands\n(1) Autumnvale\n(2) Frostpeak\n(3) Kindlewood\n(4) Aquaville\n\nEnter the island you want to go: ");
+        System.out.print("\nIslands\n(1) Autumnvale\n(2) Frostpeak\n(3) Kindlewood\n(4) Aquaville\n\nEnter the island you want to go: ");
         int choice = scan.nextInt();
+        
+        int chosenRoutes = 0;
 
         if (choice >= 1 && choice <= locations.length) {
             switch (choice) {
                 case 1:
                     System.out.println("\nYou choose the island of " + locations[choice - 1] + "."); // autumnvale
                     System.out.print("\nDESCRIPTION: Autumn or Fall is the season on this island. In contrast to its beautiful season, strong to violent winds are what covers the entire island.\n");
-                    displayRoutes(1);
-                    onBoat();
+                    chosenRoutes = displayRoutes(1);
+                    ImberCovetoAutumnvale(chosenRoutes);
+                    //onBoat();
+                    //Map.map1();
                     break;
                 case 2:
                     System.out.println("\nYou choose the island of " + locations[choice - 1] + "."); // frostpeak
                     System.out.println("\nDESCRIPTION: An island of ice and snow. Frostpeak is the territory of wolves which has a keen sense of smell, hearing, and vision.\n");
-                    displayRoutes(2);
-                    onBoat();
+                    chosenRoutes = displayRoutes(2);
+                    ImberCovetoFrostpeak(chosenRoutes);
+                    
                     break;
                 case 3:
                     System.out.println("\nYou choose the island of " + locations[choice - 1] + "."); // kindlewood
                     System.out.println("\nDESCRIPTION: One of the Forbidden Islands known for its earthquake phenomenon and is best described for its weather condition - summer.\n");
-                    displayRoutes(3);
-                    onBoat();
+                    chosenRoutes = displayRoutes(3);
+                    ImberCovetoKindlewood(chosenRoutes);
+                    
                     break;
                 case 4:
                     System.out.println("\nYou choose the island of " + locations[choice - 1] + "."); // aquaville
                     System.out.println("\nDESCRIPTION: Aquaville is an island that frequently rains. The said island is known to be a home of sea monsters. Be careful with your encounters with them.\n");
-                    displayRoutes(4);
-                    onBoat();
+                    chosenRoutes = displayRoutes(4);
+                    ImberCovetoAquaville(chosenRoutes);
                     break;
                 default:
                     System.out.println("Invalid input. Enter the number that are listed in the option only.");
@@ -282,7 +289,7 @@ public class GuardianofArchipelago {
         }
     }
 
-    public static void displayRoutes(int islandIndex1) {
+    public static int displayRoutes(int islandIndex1) {
         Routes Routes = new Routes();
         
         System.out.println("\nPossible routes from your current location:");
@@ -319,37 +326,163 @@ public class GuardianofArchipelago {
         System.out.print("\nEnter the number of the route you want to take from the options: ");
         int chosenRoutes = scan.nextInt();
         System.out.println("The route you choose is: (" + chosenRoutes + ") " + distances[chosenRoutes - 1] + " meter - " + routes[chosenRoutes - 1]);
+        
+        return chosenRoutes;
     }
         
-    public static void onBoat() {
-        System.out.println("\nThe boat where you at started sailing...");
-        System.out.println("\nWarning: You encounter an obstacle!\n");
-    
+    public static boolean onBoat() {
+        System.out.println("\nThe boat where you are started sailing...");
+        System.out.println("\nWarning: You encounter an obstacle!");
+        
         QuizGame quizGame = new QuizGame();
-    
-        System.out.println("Welcome! You have 60 seconds to answer the question.");
-        quizGame.startTimer(60);
-    
+        scan.nextLine();
+
         String question = quizGame.getRandomQuestion();
-        System.out.println(question);
-        int questionIndex = Arrays.asList(quizGame.getQuestions()).indexOf(question);
-        scan.nextLine(); // Consume the newline character
-        String userAnswer = scan.nextLine().toUpperCase();
+        System.out.println("\nYou have 60 seconds to answer the question.");
+        
+        for (int live = 1; live <= 3; live++) {
+            quizGame.startTimer(60);
     
-        // Stop the timer thread when the user enters an answer
-        quizGame.stopTimer();
+            System.out.println(question);
+            int questionIndex = Arrays.asList(quizGame.getQuestions()).indexOf(question);
+            String userAnswer = scan.nextLine().toUpperCase();
     
-        if (questionIndex >= 0 && questionIndex < quizGame.getAnswers().length) {
-            if (quizGame.checkAnswer(userAnswer, questionIndex)) {
-                System.out.println("Your answer is: " + userAnswer);
-                System.out.println("Correct!");
+            // Stop the timer thread when the user enters an answer
+            quizGame.stopTimer();
+    
+            if (questionIndex >= 0 && questionIndex < quizGame.getAnswers().length) {
+                if (quizGame.checkAnswer(userAnswer, questionIndex)) {
+                    System.out.println("Your answer is: " + userAnswer);
+                    System.out.println("Correct!");
+                    break; // Exit the method if the answer is correct
+                } else {
+                    System.out.println("Your answer is: " + userAnswer);
+                    System.out.println("Correct answer is: " + quizGame.getAnswers()[questionIndex]);
+                    System.out.print("Incorrect! You have " + (3 - live) + " live/s left. ");
+                    if (live == 3) {
+                        System.out.println("\n\nMission Failed! Your adventure ends here.");
+                        System.exit(0);
+                    } else {
+                        System.out.println("Try again!\n");
+                    }
+                }
             } else {
-                System.out.println("Your answer is: " + userAnswer);
-                System.out.println("Correct answer is: " + quizGame.getAnswers()[questionIndex]);
-                System.out.println("Incorrect!");
+                System.out.println("Invalid question index.");
             }
-        } else {
-            System.out.println("Invalid question index.");
+        }
+        return false;
+    }
+    
+    public static void ImberCovetoAutumnvale(int chosenRoutes){
+        switch(chosenRoutes) {
+            case 1:
+                onBoat();   
+                //insert the method of map for Autumnvale that have an indicator: Youre here.
+                break;
+            case 2:
+                onBoat();
+                //insert the method of map for Frostpeak that have an indicator: Youre here.
+                onBoat();
+                //insert the method of map for Autumnvale that have an indicator: Youre here.
+                break;
+            case 3:
+                onBoat();
+                //insert the method of map for Frostpeak that have an indicator: Youre here.
+                onBoat();
+                //insert the method of map for Aquaville that have an indicator: Youre here.
+                onBoat();
+                //insert the method of map for Kindlewood that have an indicator: Youre here.
+                onBoat();
+                //insert the method of map for Autumnvale that have an indicator: Youre here.
+                break;
+            default:
+                break;
+        }
+    }
+
+    public static void ImberCovetoFrostpeak(int chosenRoutes){
+        switch(chosenRoutes) {
+            case 1:
+                onBoat();   
+                //insert the method of map for Frostpeak that have an indicator: Youre here.
+                break;
+            case 2:
+                onBoat();
+                //insert the method of map for Autumnvale that have an indicator: Youre here.
+                onBoat();
+                //insert the method of map for Frostpeak that have an indicator: Youre here.
+                break;
+            case 3:
+                onBoat();
+                //insert the method of map for Autumnvale that have an indicator: Youre here.
+                onBoat();
+                //insert the method of map for Kindlewood that have an indicator: Youre here.
+                onBoat();
+                //insert the method of map for Aquaville that have an indicator: Youre here.
+                onBoat();
+                //insert the method of map for Frostpeak that have an indicator: Youre here.
+                break;
+            default:
+                break;
+        }
+    }
+
+    public static void ImberCovetoKindlewood(int chosenRoutes){
+        switch(chosenRoutes) {
+            case 1:
+                onBoat();   
+                //insert the method of map for Autumnvale that have an indicator: Youre here.
+                onBoat();   
+                //insert the method of map for Kindlewood that have an indicator: Youre here.
+                break;
+            case 2:
+                onBoat();
+                //insert the method of map for Frostpeak that have an indicator: Youre here.
+                onBoat();
+                //insert the method of map for Autumnvale that have an indicator: Youre here.
+                onBoat();   
+                //insert the method of map for Kindlewood that have an indicator: Youre here.
+                break;
+            case 3:
+                onBoat();
+                //insert the method of map for Frostpeak that have an indicator: Youre here.
+                onBoat();
+                //insert the method of map for Aquaville that have an indicator: Youre here.
+                onBoat();
+                //insert the method of map for Kindlewood that have an indicator: Youre here.
+                break;
+            default:
+                break;
+        }
+    }
+
+    
+    public static void ImberCovetoAquaville(int chosenRoutes){
+        switch(chosenRoutes) {
+            case 1:
+                onBoat();   
+                //insert the method of map for Frostpeak that have an indicator: Youre here.
+                onBoat();   
+                //insert the method of map for Aquaville that have an indicator: Youre here.
+                break;
+            case 2:
+                onBoat();
+                //insert the method of map for Autumnvale that have an indicator: Youre here.
+                onBoat();
+                //insert the method of map for Frostpeak that have an indicator: Youre here.
+                onBoat();   
+                //insert the method of map for Aquaville that have an indicator: Youre here.
+                break;
+            case 3:
+                onBoat();
+                //insert the method of map for Autumnvale that have an indicator: Youre here.
+                onBoat();
+                //insert the method of map for Kindlewood that have an indicator: Youre here.
+                onBoat();
+                //insert the method of map for Aquaville that have an indicator: Youre here.
+                break;
+            default:
+                break;
         }
     }
 
@@ -357,7 +490,7 @@ public class GuardianofArchipelago {
         System.out.println("\n\nWelcome to the Guardian of Archipelago!\n");
 
         Introduction();
-
+        int chosenRoutes = 0;
         boolean continueProgram = true;
         while (continueProgram) {
             System.out.print("\nDo you want to continue?\n(1) Yes\n(2) No \n");
@@ -367,9 +500,12 @@ public class GuardianofArchipelago {
                 case 1:
                     continueProgram = false;
                     Map Map = new Map();
-                    Map.map();
+                    Map.map1();
                     checkList();
                     Islands();
+                    System.out.println("hoyy");
+                    //chosenRoutes = displayRoutes(1);
+                    //ImberCovetoAutumnvale(chosenRoutes);
                     break;
                 case 2:
                     System.out.print("\nAre you sure you want to end the game?\n(1) Yes\n(2) No\nEnter your choice: ");
@@ -378,7 +514,7 @@ public class GuardianofArchipelago {
                         case 1:
                             continueProgram = false;
                             System.out.print("\nExit");
-                            break;
+                            System.exit(0);
                         case 2:
                             continueProgram = true;
                             break;
