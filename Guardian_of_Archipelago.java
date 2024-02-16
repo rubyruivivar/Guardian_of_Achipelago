@@ -257,38 +257,93 @@ public class GuardianofArchipelago {
                     System.out.println("\nYou choose the island of " + locations[choice - 1] + "."); // autumnvale
                     System.out.print("\nDESCRIPTION: Autumn or Fall is the season on this island. In contrast to its beautiful season, strong to violent winds are what covers the entire island.\n");
                     chosenRoutes = displayRoutes(1);
-                    ImberCovetoAutumnvale(chosenRoutes);
-                    //onBoat();
-                    //Map.map1();
+                    switch (choice) {
+                        case 1:
+                            shownRoutes.ImberCovetoAutumnvale(chosenRoutes);
+                            break;
+                        case 2:
+                            shownRoutes.FrostpeaktoAutumnvale(chosenRoutes);   
+                            break;
+                        case 3:
+                            shownRoutes.KindlewoodtoAutumnvale(chosenRoutes);  
+                            break;
+                        case 4:
+                            shownRoutes.AquavilletoAutumnvale(chosenRoutes);  
+                            break;   
+                        default:
+                            System.out.println("Invalid input.");       
+                    }
                     break;
                 case 2:
                     System.out.println("\nYou choose the island of " + locations[choice - 1] + "."); // frostpeak
                     System.out.println("\nDESCRIPTION: An island of ice and snow. Frostpeak is the territory of wolves which has a keen sense of smell, hearing, and vision.\n");
                     chosenRoutes = displayRoutes(2);
-                    ImberCovetoFrostpeak(chosenRoutes);
-                    
-                    break;
+                    switch (choice) {
+                        case 1:
+                            shownRoutes.ImberCovetoFrostpeak(chosenRoutes);
+                            break;
+                        case 2:
+                            shownRoutes.AutumnvaletoFrostpeak(chosenRoutes);   
+                            break;
+                        case 3:
+                            shownRoutes.KindlewoodtoFrostpeak(chosenRoutes);  
+                            break;
+                        case 4:
+                            shownRoutes.AquavilletoFrostpeak(chosenRoutes);  
+                            break;   
+                        default:
+                            System.out.println("Invalid input.");
+                    }         
+                        break;
                 case 3:
                     System.out.println("\nYou choose the island of " + locations[choice - 1] + "."); // kindlewood
                     System.out.println("\nDESCRIPTION: One of the Forbidden Islands known for its earthquake phenomenon and is best described for its weather condition - summer.\n");
                     chosenRoutes = displayRoutes(3);
-                    ImberCovetoKindlewood(chosenRoutes);
-                    
+                    switch (choice) {
+                        case 1:
+                            shownRoutes.ImberCovetoKindlewood(chosenRoutes);
+                            break;
+                        case 2:
+                            shownRoutes.AutumnvaletoKindlewood(chosenRoutes);   
+                            break;
+                        case 3:
+                            shownRoutes.FrostpeaktoKindlewood(chosenRoutes);  
+                            break;
+                        case 4:
+                            shownRoutes.AquavilletoKindlewood(chosenRoutes);  
+                            break;   
+                        default:
+                            System.out.println("Invalid input.");
+                    }        
                     break;
                 case 4:
                     System.out.println("\nYou choose the island of " + locations[choice - 1] + "."); // aquaville
                     System.out.println("\nDESCRIPTION: Aquaville is an island that frequently rains. The said island is known to be a home of sea monsters. Be careful with your encounters with them.\n");
                     chosenRoutes = displayRoutes(4);
-                    ImberCovetoAquaville(chosenRoutes);
+                    switch (choice) {
+                        case 1:
+                            shownRoutes.ImberCovetoAquaville(chosenRoutes);
+                            break;
+                        case 2:
+                            shownRoutes.AutumnvaletoAquaville(chosenRoutes);   
+                            break;
+                        case 3:
+                            shownRoutes.FrostpeaktoAquaville(chosenRoutes);  
+                            break;
+                        case 4:
+                            shownRoutes.KindlewoodtoAquaville(chosenRoutes);  
+                            break;   
+                        default:
+                            System.out.println("Invalid input.");
+                    }
                     break;
                 default:
                     System.out.println("Invalid input. Enter the number that are listed in the option only.");
-            }
+            }        
         } else {
             System.out.println("Invalid input. Enter the number that are listed in the option only.");
         }
     }
-
     public static int displayRoutes(int islandIndex1) {
         Routes Routes = new Routes();
         
@@ -323,7 +378,7 @@ public class GuardianofArchipelago {
         // Display shortest route
         System.out.println(
                 "Shortest Route: (" + (shortestRouteIndex + 1) + ") Distance: " + distances[shortestRouteIndex] + " meter - " + routes[shortestRouteIndex]);
-        System.out.print("\nEnter the number of the route you want to take from the options: ");
+        System.out.print("\nEnter the route you want to take from the options: ");
         int chosenRoutes = scan.nextInt();
         System.out.println("The route you choose is: (" + chosenRoutes + ") " + distances[chosenRoutes - 1] + " meter - " + routes[chosenRoutes - 1]);
         
@@ -372,119 +427,7 @@ public class GuardianofArchipelago {
         }
         return false;
     }
-    
-    public static void ImberCovetoAutumnvale(int chosenRoutes){
-        switch(chosenRoutes) {
-            case 1:
-                onBoat();   
-                //insert the method of map for Autumnvale that have an indicator: Youre here.
-                break;
-            case 2:
-                onBoat();
-                //insert the method of map for Frostpeak that have an indicator: Youre here.
-                onBoat();
-                //insert the method of map for Autumnvale that have an indicator: Youre here.
-                break;
-            case 3:
-                onBoat();
-                //insert the method of map for Frostpeak that have an indicator: Youre here.
-                onBoat();
-                //insert the method of map for Aquaville that have an indicator: Youre here.
-                onBoat();
-                //insert the method of map for Kindlewood that have an indicator: Youre here.
-                onBoat();
-                //insert the method of map for Autumnvale that have an indicator: Youre here.
-                break;
-            default:
-                break;
-        }
-    }
 
-    public static void ImberCovetoFrostpeak(int chosenRoutes){
-        switch(chosenRoutes) {
-            case 1:
-                onBoat();   
-                //insert the method of map for Frostpeak that have an indicator: Youre here.
-                break;
-            case 2:
-                onBoat();
-                //insert the method of map for Autumnvale that have an indicator: Youre here.
-                onBoat();
-                //insert the method of map for Frostpeak that have an indicator: Youre here.
-                break;
-            case 3:
-                onBoat();
-                //insert the method of map for Autumnvale that have an indicator: Youre here.
-                onBoat();
-                //insert the method of map for Kindlewood that have an indicator: Youre here.
-                onBoat();
-                //insert the method of map for Aquaville that have an indicator: Youre here.
-                onBoat();
-                //insert the method of map for Frostpeak that have an indicator: Youre here.
-                break;
-            default:
-                break;
-        }
-    }
-
-    public static void ImberCovetoKindlewood(int chosenRoutes){
-        switch(chosenRoutes) {
-            case 1:
-                onBoat();   
-                //insert the method of map for Autumnvale that have an indicator: Youre here.
-                onBoat();   
-                //insert the method of map for Kindlewood that have an indicator: Youre here.
-                break;
-            case 2:
-                onBoat();
-                //insert the method of map for Frostpeak that have an indicator: Youre here.
-                onBoat();
-                //insert the method of map for Autumnvale that have an indicator: Youre here.
-                onBoat();   
-                //insert the method of map for Kindlewood that have an indicator: Youre here.
-                break;
-            case 3:
-                onBoat();
-                //insert the method of map for Frostpeak that have an indicator: Youre here.
-                onBoat();
-                //insert the method of map for Aquaville that have an indicator: Youre here.
-                onBoat();
-                //insert the method of map for Kindlewood that have an indicator: Youre here.
-                break;
-            default:
-                break;
-        }
-    }
-
-    
-    public static void ImberCovetoAquaville(int chosenRoutes){
-        switch(chosenRoutes) {
-            case 1:
-                onBoat();   
-                //insert the method of map for Frostpeak that have an indicator: Youre here.
-                onBoat();   
-                //insert the method of map for Aquaville that have an indicator: Youre here.
-                break;
-            case 2:
-                onBoat();
-                //insert the method of map for Autumnvale that have an indicator: Youre here.
-                onBoat();
-                //insert the method of map for Frostpeak that have an indicator: Youre here.
-                onBoat();   
-                //insert the method of map for Aquaville that have an indicator: Youre here.
-                break;
-            case 3:
-                onBoat();
-                //insert the method of map for Autumnvale that have an indicator: Youre here.
-                onBoat();
-                //insert the method of map for Kindlewood that have an indicator: Youre here.
-                onBoat();
-                //insert the method of map for Aquaville that have an indicator: Youre here.
-                break;
-            default:
-                break;
-        }
-    }
 
     public static void main(String[] args) {
         System.out.println("\n\nWelcome to the Guardian of Archipelago!\n");
@@ -529,5 +472,355 @@ public class GuardianofArchipelago {
             }
         }
         scan.close();
+    }
+}
+
+class shownRoutes{
+    private static GuardianofArchipelago GuardianofArchipelago = new GuardianofArchipelago();
+
+    public static void ImberCovetoAutumnvale(int chosenRoutes){
+        switch(chosenRoutes) {
+            case 1:
+                GuardianofArchipelago.onBoat();   
+                //insert the method of map for Autumnvale that have an indicator: Youre here.
+                break;
+            case 2:
+                GuardianofArchipelago.onBoat(); 
+                //insert the method of map for Frostpeak that have an indicator: Youre here.
+                GuardianofArchipelago.onBoat();
+                //insert the method of map for Autumnvale that have an indicator: Youre here.
+                break;
+            case 3:
+                 GuardianofArchipelago.onBoat(); 
+                //insert the method of map for Frostpeak that have an indicator: Youre here.
+                GuardianofArchipelago.onBoat();
+                //insert the method of map for Aquaville that have an indicator: Youre here.
+                GuardianofArchipelago.onBoat();
+                //insert the method of map for Kindlewood that have an indicator: Youre here.
+                GuardianofArchipelago.onBoat();
+                //insert the method of map for Autumnvale that have an indicator: Youre here.
+                break;
+            default:
+                break;
+        }
+    }
+
+    public static void ImberCovetoFrostpeak(int chosenRoutes){
+        switch(chosenRoutes) {
+            case 1:
+                GuardianofArchipelago.onBoat();
+                //insert the method of map for Frostpeak that have an indicator: Youre here.
+                break;
+            case 2:
+                GuardianofArchipelago.onBoat();
+                //insert the method of map for Autumnvale that have an indicator: Youre here.
+                GuardianofArchipelago.onBoat();
+                //insert the method of map for Frostpeak that have an indicator: Youre here.
+                break;
+            case 3:
+                GuardianofArchipelago.onBoat();
+                //insert the method of map for Autumnvale that have an indicator: Youre here.
+                GuardianofArchipelago.onBoat();
+                //insert the method of map for Kindlewood that have an indicator: Youre here.
+                GuardianofArchipelago.onBoat();
+                //insert the method of map for Aquaville that have an indicator: Youre here.
+                GuardianofArchipelago.onBoat();
+                //insert the method of map for Frostpeak that have an indicator: Youre here.
+                break;
+            default:
+                break;
+        }
+    }
+
+    public static void ImberCovetoKindlewood(int chosenRoutes){
+        switch(chosenRoutes) {
+            case 1:
+                GuardianofArchipelago.onBoat();   
+                //insert the method of map for Autumnvale that have an indicator: Youre here.
+                GuardianofArchipelago.onBoat();  
+                //insert the method of map for Kindlewood that have an indicator: Youre here.
+                break;
+            case 2:
+                GuardianofArchipelago.onBoat();
+                //insert the method of map for Frostpeak that have an indicator: Youre here.
+                GuardianofArchipelago.onBoat();
+                //insert the method of map for Autumnvale that have an indicator: Youre here.
+                GuardianofArchipelago.onBoat();   
+                //insert the method of map for Kindlewood that have an indicator: Youre here.
+                break;
+            case 3:
+                GuardianofArchipelago.onBoat();
+                //insert the method of map for Frostpeak that have an indicator: Youre here.
+                GuardianofArchipelago.onBoat();
+                //insert the method of map for Aquaville that have an indicator: Youre here.
+                GuardianofArchipelago.onBoat();
+                //insert the method of map for Kindlewood that have an indicator: Youre here.
+                break;
+            default:
+                break;
+        }
+    }
+
+    public static void ImberCovetoAquaville(int chosenRoutes){
+        switch(chosenRoutes) {
+            case 1:
+                GuardianofArchipelago.onBoat();   
+                //insert the method of map for Frostpeak that have an indicator: Youre here.
+                GuardianofArchipelago.onBoat();   
+                //insert the method of map for Aquaville that have an indicator: Youre here.
+                break;
+            case 2:
+                GuardianofArchipelago.onBoat();
+                //insert the method of map for Autumnvale that have an indicator: Youre here.
+                GuardianofArchipelago.onBoat();
+                //insert the method of map for Frostpeak that have an indicator: Youre here.
+                GuardianofArchipelago.onBoat(); 
+                //insert the method of map for Aquaville that have an indicator: Youre here.
+                break;
+            case 3:
+                GuardianofArchipelago.onBoat();
+                //insert the method of map for Autumnvale that have an indicator: Youre here.
+                GuardianofArchipelago.onBoat();
+                //insert the method of map for Kindlewood that have an indicator: Youre here.
+                GuardianofArchipelago.onBoat();
+                //insert the method of map for Aquaville that have an indicator: Youre here.
+                break;
+            default:
+                break;
+        }
+    }
+
+    public static void AutumnvaletoFrostpeak(int chosenRoutes){
+        switch(chosenRoutes) {
+            case 1:
+                GuardianofArchipelago.onBoat(); 
+                //insert the method of map for Frostpeak that have an indicator: Youre here.
+                break;
+            case 2:
+                GuardianofArchipelago.onBoat();
+                //insert the method of map for Kindlewood that have an indicator: Youre here.
+                GuardianofArchipelago.onBoat();
+                //insert the method of map for Aquaville that have an indicator: Youre here.
+                GuardianofArchipelago.onBoat();
+                //insert the method of map for Frostpeak that have an indicator: Youre here.
+                break;
+            default:
+                break;
+        }
+    }
+
+    public static void AutumnvaletoKindlewood(int chosenRoutes){
+        switch(chosenRoutes) {
+            case 1:
+                GuardianofArchipelago.onBoat(); 
+                //insert the method of map for Kindlewood that have an indicator: Youre here.
+                break;
+            case 2:
+                GuardianofArchipelago.onBoat();
+                //insert the method of map for Frostpeak that have an indicator: Youre here.
+                GuardianofArchipelago.onBoat();
+                //insert the method of map for Aquaville that have an indicator: Youre here.
+                GuardianofArchipelago.onBoat();
+                //insert the method of map for Kindlewood that have an indicator: Youre here.
+                break;
+            default:
+                break;
+        }
+    }
+
+    public static void AutumnvaletoAquaville(int chosenRoutes){
+        switch(chosenRoutes) {
+            case 1:
+                GuardianofArchipelago.onBoat();   
+                //insert the method of map for Frostpeak that have an indicator: Youre here.
+                GuardianofArchipelago.onBoat();   
+                //insert the method of map for Aquaville that have an indicator: Youre here.
+                break;
+            case 2:
+                GuardianofArchipelago.onBoat();
+                //insert the method of map for Kindlewood that have an indicator: Youre here.
+                GuardianofArchipelago.onBoat();
+                //insert the method of map for Aquaville that have an indicator: Youre here.
+                break;
+            default:
+                break;
+        }
+    }
+
+    public static void FrostpeaktoAutumnvale(int chosenRoutes){
+        switch(chosenRoutes) {
+            case 1:
+                GuardianofArchipelago.onBoat();  
+                //insert the method of map for Autumnvale that have an indicator: Youre here.
+                break;
+            case 2:
+                GuardianofArchipelago.onBoat();
+                //insert the method of map for Aquaville that have an indicator: Youre here.
+                GuardianofArchipelago.onBoat();
+                //insert the method of map for Kindlewood that have an indicator: Youre here.
+                GuardianofArchipelago.onBoat();   
+                //insert the method of map for Autumnvale that have an indicator: Youre here.
+                break;
+            default:
+                break;
+        }
+    }
+
+
+    public static void FrostpeaktoKindlewood(int chosenRoutes){
+        switch(chosenRoutes) {
+            case 1:
+                GuardianofArchipelago.onBoat();   
+                //insert the method of map for Autumnvale that have an indicator: Youre here.
+                GuardianofArchipelago.onBoat();
+                //insert the method of map for Kindlewood that have an indicator: Youre here.
+                break;
+            case 2:
+                GuardianofArchipelago.onBoat();
+                //insert the method of map for Aquaville that have an indicator: Youre here.
+                GuardianofArchipelago.onBoat();
+                //insert the method of map for Kindlewood that have an indicator: Youre here.
+                break;
+            default:
+                break;
+        }
+    }
+
+    public static void FrostpeaktoAquaville(int chosenRoutes){
+        switch(chosenRoutes) {
+            case 1:
+                GuardianofArchipelago.onBoat();  
+                //insert the method of map for Aquaville that have an indicator: Youre here.
+                break;
+            case 2:
+                GuardianofArchipelago.onBoat();;
+                //insert the method of map for Autumnvale that have an indicator: Youre here.
+                GuardianofArchipelago.onBoat();
+                //insert the method of map for Kindlewood that have an indicator: Youre here.
+                GuardianofArchipelago.onBoat();  
+                //insert the method of map for Aquaville that have an indicator: Youre here.
+                break;
+            default:
+                break;
+        }
+    }
+
+    public static void KindlewoodtoAutumnvale(int chosenRoutes){
+        switch(chosenRoutes) {
+            case 1:
+                GuardianofArchipelago.onBoat();  
+                //insert the method of map for Autumnvale that have an indicator: Youre here.
+                break;
+            case 2:
+                GuardianofArchipelago.onBoat();
+                //insert the method of map for Aquaville that have an indicator: Youre here.
+                GuardianofArchipelago.onBoat();
+                //insert the method of map for Frostpeak that have an indicator: Youre here.
+                GuardianofArchipelago.onBoat();   
+                //insert the method of map for Autumnvale that have an indicator: Youre here.
+                break;
+            default:
+                break;
+        }
+    }
+
+    public static void KindlewoodtoFrostpeak(int chosenRoutes){
+        switch(chosenRoutes) {
+            case 1:
+                GuardianofArchipelago.onBoat();  
+                //insert the method of map for Autumnvale that have an indicator: Youre here.
+                GuardianofArchipelago.onBoat();
+                //insert the method of map for Frostpeak that have an indicator: Youre here.
+                break;
+            case 2:
+                GuardianofArchipelago.onBoat();
+                //insert the method of map for Aquaville that have an indicator: Youre here.
+                GuardianofArchipelago.onBoat();
+                //insert the method of map for Frostpeak that have an indicator: Youre here.
+                break;
+            default:
+                break;
+        }
+    }
+
+    public static void KindlewoodtoAquaville(int chosenRoutes){
+        switch(chosenRoutes) {
+            case 1:
+                GuardianofArchipelago.onBoat();   
+                //insert the method of map for Aquaville that have an indicator: Youre here.
+                break;
+            case 2:
+                GuardianofArchipelago.onBoat();
+                //insert the method of map for Autumnvale that have an indicator: Youre here.
+                GuardianofArchipelago.onBoat();
+                //insert the method of map for Frostpeak that have an indicator: Youre here.
+                GuardianofArchipelago.onBoat();  
+                //insert the method of map for Aquaville that have an indicator: Youre here.
+                break;
+            default:
+                break;
+        }
+    }
+
+
+
+    public static void AquavilletoAutumnvale(int chosenRoutes){
+        switch(chosenRoutes) {
+            case 1:
+                GuardianofArchipelago.onBoat();   
+                //insert the method of map for Frostpeak that have an indicator: Youre here.
+                GuardianofArchipelago.onBoat();
+                //insert the method of map for Autumnvale that have an indicator: Youre here.
+                break;
+            case 2:
+                GuardianofArchipelago.onBoat();
+                //insert the method of map for Aquaville that have an indicator: Youre here.
+                GuardianofArchipelago.onBoat();
+                //insert the method of map for Kindlewood that have an indicator: Youre here.
+                GuardianofArchipelago.onBoat();   
+                //insert the method of map for Autumnvale that have an indicator: Youre here.
+                break;
+            default:
+                break;
+        }
+    }
+
+
+    public static void AquavilletoFrostpeak(int chosenRoutes){
+        switch(chosenRoutes) {
+            case 1:
+                GuardianofArchipelago.onBoat(); 
+                //insert the method of map for Frostpeak that have an indicator: Youre here.
+                break;
+            case 2:
+                GuardianofArchipelago.onBoat();
+                //insert the method of map for Kindlewood that have an indicator: Youre here.
+                GuardianofArchipelago.onBoat();
+                //insert the method of map for Autumnvale that have an indicator: Youre here.
+                GuardianofArchipelago.onBoat();   
+                //insert the method of map for Frostpeak that have an indicator: Youre here.
+                break;
+            default:
+                break;
+        }
+    }
+
+    public static void AquavilletoKindlewood(int chosenRoutes){
+        switch(chosenRoutes) {
+            case 1:
+                GuardianofArchipelago.onBoat();  
+                //insert the method of map for Kindlewood that have an indicator: Youre here.
+                break;
+            case 2:
+                GuardianofArchipelago.onBoat();
+                //insert the method of map for Frostpeak that have an indicator: Youre here.
+                GuardianofArchipelago.onBoat();
+                //insert the method of map for Autumnvale that have an indicator: Youre here.
+                GuardianofArchipelago.onBoat();  
+                //insert the method of map for Kindlewood that have an indicator: Youre here.
+                break;
+            default:
+                break;
+        }
     }
 }
