@@ -244,8 +244,11 @@ public class GuardianofArchipelago {
         String[] location = { "Autumnvale ", "Frostpeak", "Kindlewood ", "Aquaville" };
         Destination(location);
     }
-
+    
     public static void Destination(String[] locations) {
+        boolean continueProgram2 = true;
+        while (continueProgram2) {
+
         System.out.print("\nIslands\n(1) Autumnvale\n(2) Frostpeak\n(3) Kindlewood\n(4) Aquaville\n\nEnter the island you want to go: ");
         int choice = scan.nextInt();
         
@@ -273,6 +276,7 @@ public class GuardianofArchipelago {
                         default:
                             System.out.println("Invalid input.");       
                     }
+                    continueProgram2 = false;
                     break;
                 case 2:
                     System.out.println("\nYou choose the island of " + locations[choice - 1] + "."); // frostpeak
@@ -293,8 +297,9 @@ public class GuardianofArchipelago {
                             break;   
                         default:
                             System.out.println("Invalid input.");
-                    }         
-                        break;
+                    }
+                    continueProgram2 = false;         
+                    break;
                 case 3:
                     System.out.println("\nYou choose the island of " + locations[choice - 1] + "."); // kindlewood
                     System.out.println("\nDESCRIPTION: One of the Forbidden Islands known for its earthquake phenomenon and is best described for its weather condition - summer.\n");
@@ -314,7 +319,8 @@ public class GuardianofArchipelago {
                             break;   
                         default:
                             System.out.println("Invalid input.");
-                    }        
+                    }
+                    continueProgram2 = false;        
                     break;
                 case 4:
                     System.out.println("\nYou choose the island of " + locations[choice - 1] + "."); // aquaville
@@ -334,14 +340,19 @@ public class GuardianofArchipelago {
                             shownRoutes.KindlewoodtoAquaville(chosenRoutes);  
                             break;   
                         default:
+                            continueProgram2 = true;
                             System.out.println("Invalid input.");
                     }
+                    continueProgram2 = false;
                     break;
                 default:
+                    continueProgram2 = true;
                     System.out.println("Invalid input. Enter the number that are listed in the option only.");
             }        
         } else {
+            continueProgram2 = true;
             System.out.println("Invalid input. Enter the number that are listed in the option only.");
+        }
         }
     }
     public static int displayRoutes(int islandIndex1) {
@@ -413,7 +424,7 @@ public class GuardianofArchipelago {
                 } else {
                     System.out.println("Your answer is: " + userAnswer);
                     System.out.println("Correct answer is: " + quizGame.getAnswers()[questionIndex]);
-                    System.out.print("Incorrect! You have " + (3 - live) + " live/s left. ");
+                    System.out.print("You have " + (3 - live) + " live/s left. ");
                     if (live == 3) {
                         System.out.println("\n\nMission Failed! Your adventure ends here.");
                         System.exit(0);
@@ -424,6 +435,7 @@ public class GuardianofArchipelago {
             } else {
                 System.out.println("Invalid question index.");
             }
+            System.out.println("Your current live/s: " + (3 - live));
         }
         return false;
     }
@@ -434,14 +446,14 @@ public class GuardianofArchipelago {
 
         Introduction();
         int chosenRoutes = 0;
-        boolean continueProgram = true;
-        while (continueProgram) {
+        boolean continueProgram1 = true;
+        while (continueProgram1) {
             System.out.print("\nDo you want to continue?\n(1) Yes\n(2) No \n");
             System.out.print("\nEnter your choice: ");
             int YN = scan.nextInt();
             switch (YN) {
                 case 1:
-                    continueProgram = false;
+                    continueProgram1 = false;
                     Map Map = new Map();
                     Map.map1();
                     checkList();
@@ -455,11 +467,11 @@ public class GuardianofArchipelago {
                     int exiting = scan.nextInt();
                     switch (exiting) {
                         case 1:
-                            continueProgram = false;
+                            continueProgram1 = false;
                             System.out.print("\nExit");
                             System.exit(0);
                         case 2:
-                            continueProgram = true;
+                            continueProgram1 = true;
                             break;
                         default:
                             System.out.println("Invalid input. Enter the number that are listed in the option only.");
