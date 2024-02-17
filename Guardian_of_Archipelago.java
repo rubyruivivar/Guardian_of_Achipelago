@@ -1,61 +1,123 @@
 import java.util.Scanner;
 import java.util.Random;
 import java.util.Arrays;
+import java.util.Map;
+
+class banner {
+    public static void generateMAPBanner() {
+        System.out.println(
+                "\n                                                                                                                                                                                   ");
+        System.out.println(
+                "     █████   ███   █████          ████                                                 █████                  █████████                                     █████  ███ ");
+        System.out.println(
+                "     ░░███   ░███  ░░███          ░░███                                                ░░███                  ███░░░░░███                                   ░░███  ░░░ ");
+        System.out.println(
+                "      ░███   ░███   ░███   ██████  ░███   ██████   ██████  █████████████    ██████     ███████    ██████     ███     ░░░  █████ ████  ██████   ████████   ███████  ████   ██████   ████████  ");
+        System.out.println(
+                "      ░███   ░███   ░███  ███░░███ ░███  ███░░███ ███░░███░░███░░███░░███  ███░░███   ░░░███░    ███░░███   ░███         ░░███ ░███  ░░░░░███ ░░███░░███ ███░░███ ░░███  ░░░░░███ ░░███░░███  ");
+        System.out.println(
+                "      ░░███  █████  ███  ░███████  ░███ ░███ ░░░ ░███ ░███ ░███ ░███ ░███ ░███████      ░███    ░███ ░███   ░███    █████ ░███ ░███   ███████  ░███ ░░░ ░███ ░███  ░███   ███████  ░███ ░███ ");
+        System.out.println(
+                "       ░░░█████░█████░   ░███░░░   ░███ ░███  ███░███ ░███ ░███ ░███ ░███ ░███░░░       ░███ ███░███ ░███   ░░███  ░░███  ░███ ░███  ███░░███  ░███     ░███ ░███  ░███  ███░░███  ░███ ░███  ");
+        System.out.println(
+                "         ░░███ ░░███     ░░██████  █████░░██████ ░░██████  █████░███ █████░░██████      ░░█████ ░░██████     ░░█████████  ░░████████░░████████ █████    ░░████████ █████░░████████ ████ █████  ");
+        System.out.println(
+                "          ░░░   ░░░       ░░░░░░  ░░░░░  ░░░░░░   ░░░░░░  ░░░░░ ░░░ ░░░░░  ░░░░░░        ░░░░░   ░░░░░░       ░░░░░░░░░    ░░░░░░░░  ░░░░░░░░ ░░░░░      ░░░░░░░░ ░░░░░  ░░░░░░░░ ░░░░ ░░░░░  ");
+        System.out.println(
+                "                                                                                                                                                                                                           ");
+        System.out.println(
+                "                                                                                                                                                                                                         ");
+        System.out.println(
+                "                                                                                                                                                                                                 ");
+        System.out.println(
+                "                                                         ██████       █████████                      █████       ███                     ████                                 ███");
+        System.out.println(
+                "                                                         ███░░███     ███░░░░░███                    ░░███       ░░░                     ░░███                                ░███");
+        System.out.println(
+                "                                               ██████   ░███ ░░░     ░███    ░███  ████████   ██████  ░███████   ████  ████████   ██████  ░███   ██████    ███████  ██████    ░███ ");
+        System.out.println(
+                "                                              ███░░███ ███████       ░███████████ ░░███░░███ ███░░███ ░███░░███ ░░███ ░░███░░███ ███░░███ ░███  ░░░░░███  ███░░███ ███░░███   ░███  ");
+        System.out.println(
+                "                                             ░███ ░███░░░███░        ░███░░░░░███  ░███ ░░░ ░███ ░░░  ░███ ░███  ░███  ░███ ░███░███████  ░███   ███████ ░███ ░███░███ ░███   ░███");
+        System.out.println(
+                "                                             ░███ ░███  ░███         ░███    ░███  ░███     ░███  ███ ░███ ░███  ░███  ░███ ░███░███░░░   ░███  ███░░███ ░███ ░███░███ ░███   ░░░ ");
+        System.out.println(
+                "                                             ░░██████   █████        █████   █████ █████    ░░██████  ████ █████ █████ ░███████ ░░██████  █████░░████████░░███████░░██████     ███ ");
+        System.out.println(
+                "                                              ░░░░░░   ░░░░░        ░░░░░   ░░░░░ ░░░░░      ░░░░░░  ░░░░ ░░░░░ ░░░░░  ░███░░░   ░░░░░░  ░░░░░  ░░░░░░░░  ░░░░░███ ░░░░░░     ░░░ ");
+        System.out.println(
+                "                                                                                                                       ░███                               ███ ░███ ");
+        System.out.println(
+                "                                                                                                                       █████                             ░░██████ ");
+        System.out.println(
+                "                                                                                                                     ░░░░░                               ░░░░░░");
+    }
+}
 
 class MainMap {
     public static void map() {
-        System.out.println("\n\n\t\t\t\t\t\t\t           MAP\n");
+        System.out.println("\n");
+        System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t███╗   ███╗ █████╗ ██████╗ ");
+        System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t████╗ ████║██╔══██╗██╔══██╗");
+        System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t██╔████╔██║███████║██████╔╝");
+        System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t██║╚██╔╝██║██╔══██║██╔═══╝ ");
+        System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t██║ ╚═╝ ██║██║  ██║██║");
+        System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t╚═╝     ╚═╝╚═╝  ╚═╝╚═╝\n");
         String[] islands = { "Imber Cove", "Autumnvale ", "Frostpeak", "Kindlewood ", "Aquaville", "Celestial Shores" };
         for (int i = 0; i < islands.length; i++) {
             if (i == 0) {
-                System.out.println("\n\n\t\t\t\t\t\t\t       You're here!     \t\t\t\n");
-                System.out.println("\t\t\t\t\t\t\t ***********************"); // Imber Cove
-                System.out.println("\t\t\t\t\t\t\t *                     *");
+                System.out.println("\n\n\t\t\t\t\t\t\t\t\t\t\t\t       You're here!     \t\t\t\n");
+                System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t ***********************"); // Imber Cove
+                System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t *                     *");
                 System.out.println(
-                        "\t\t\t\t ------------------------*     " + islands[i] + "      * -----------------------");
-                System.out.println("\t\t\t\t|\t\t\t *                     *\t\t\t|");
-                System.out.println("\t\t\t\t|\t\t\t ***********************\t\t\t|");
-                System.out.print("\t\t\t\t|\t\t\t\t\t\t\t\t\t|\n\t\t\t\tv\t\t\t\t\t\t\t\t\t|\n");
+                        "\t\t\t\t\t\t\t\t\t ------------------------*     " + islands[i]
+                                + "      * -----------------------");
+                System.out.println("\t\t\t\t\t\t\t\t\t|\t\t\t *                     *\t\t\t|");
+                System.out.println("\t\t\t\t\t\t\t\t\t|\t\t\t ***********************\t\t\t|");
+                System.out.print("\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t\t\t\t|\n\t\t\t\t\t\t\t\t\tv\t\t\t\t\t\t\t\t\t|\n");
 
             } else if (i == 1) {
-                System.out.println("\t\t     ***********************\t\t\t\t\t\t\t\t|"); // Autumvale
-                System.out.println("\t\t     *                     *\t\t\t\t\t\t\t\t|");
-                System.out.println("\t\t     *     " + islands[i] + "     * ------\t\t\t\t\t\t\t|");
-                System.out.println("\t\t     *                     *      -------\t\t\t\t\t\t|");
+                System.out.println("\t\t\t\t\t\t\t     ***********************\t\t\t\t\t\t\t\t|"); // Autumvale
+                System.out.println("\t\t\t\t\t\t\t     *                     *\t\t\t\t\t\t\t\t|");
+                System.out.println("\t\t\t\t\t\t\t     *     " + islands[i] + "     * ------\t\t\t\t\t\t\t|");
+                System.out.println("\t\t\t\t\t\t\t     *                     *      -------\t\t\t\t\t\t|");
                 System.out.println(
-                        "\t\t     ***********************\t\t-------\t\t\t\t\t\t|\n\t\t\t\t|\t\t\t      ------\t\t\t\t\t|\n\t\t\t\t|\t\t\t\t    ------\t\t\t\t|");
+                        "\t\t\t\t\t\t\t     ***********************\t\t-------\t\t\t\t\t\t|\n\t\t\t\t\t\t\t\t\t|\t\t\t      ------\t\t\t\t\t|\n\t\t\t\t\t\t\t\t\t|\t\t\t\t    ------\t\t\t\t|");
 
             } else if (i == 3) {
-                System.out.println("\t\t     ***********************\t\t\t\t\t\t\t\t|"); // Kindlewood
-                System.out.println("\t\t     *                     *\t\t\t\t\t\t\t\t|");
-                System.out.println("\t\t     *     " + islands[i] + "     * ------\t\t\t\t\t\t\t|");
-                System.out.println("\t\t     *                     *      -------\t\t\t\t\t\t|");
+                System.out.println("\t\t\t\t\t\t\t     ***********************\t\t\t\t\t\t\t\t|"); // Kindlewood
+                System.out.println("\t\t\t\t\t\t\t     *                     *\t\t\t\t\t\t\t\t|");
+                System.out.println("\t\t\t\t\t\t\t     *     " + islands[i] + "     * ------\t\t\t\t\t\t\t|");
+                System.out.println("\t\t\t\t\t\t\t     *                     *      -------\t\t\t\t\t\t|");
                 System.out.println(
-                        "\t\t     ***********************\t\t-------\t\t\t\t\t\t|\n\t\t\t\t|\t\t\t      ------\t\t\t\t\t|\n\t\t\t\t|\t\t\t\t    ------\t\t\t\t|");
+                        "\t\t\t\t\t\t\t     ***********************\t\t-------\t\t\t\t\t\t|\n\t\t\t\t\t\t\t\t\t|\t\t\t      ------\t\t\t\t\t|\n\t\t\t\t\t\t\t\t\t|\t\t\t\t    ------\t\t\t\t|");
 
             } else if (i % 2 == 0) {
                 if (i == 2) {
-                    System.out.println("\t\t\t\t|\t\t\t\t\t  -------\t     ***********************"); // Frostpeak
-                    System.out.println("\t\t\t\t|\t\t\t\t\t        -------      *                     *");
-                    System.out.println("\t\t\t\t|\t\t\t\t\t\t      ------ *      " + islands[i] + "      *");
-                    System.out.println("\t\t\t\t|\t\t\t\t\t\t\t     *                     *");
+                    System.out.println("\t\t\t\t\t\t\t\t\t|\t\t\t\t\t  -------\t     ***********************"); // Frostpeak
+                    System.out.println("\t\t\t\t\t\t\t\t\t|\t\t\t\t\t        -------      *                     *");
                     System.out.println(
-                            "\t\t\t\t|\t\t\t\t\t\t\t     ***********************\n\t\t\t\t|\t\t\t\t\t\t\t\t\t|\n\t\t\t\t|\t\t\t\t\t\t\t\t\t|");
+                            "\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t      ------ *      " + islands[i] + "      *");
+                    System.out.println("\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t\t     *                     *");
+                    System.out.println(
+                            "\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t\t     ***********************\n\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t\t\t\t|\n\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t\t\t\t|");
                 } else if (i == 4) {
-                    System.out.println("\t\t\t\t|\t\t\t\t\t  -------\t     ***********************"); // Aquaville
-                    System.out.println("\t\t\t\t|\t\t\t\t\t        -------      *                     *");
-                    System.out.println("\t\t\t\t|\t\t\t\t\t\t      ------ *      " + islands[i] + "      *");
-                    System.out.println("\t\t\t\t|\t\t\t\t\t\t\t     *                     *");
+                    System.out.println("\t\t\t\t\t\t\t\t\t|\t\t\t\t\t  -------\t     ***********************"); // Aquaville
+                    System.out.println("\t\t\t\t\t\t\t\t\t|\t\t\t\t\t        -------      *                     *");
+                    System.out.println("\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t      ------ *      " + islands[i] + "      *");
+                    System.out.println("\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t             *                     *");
                     System.out.println(
-                            "\t\t\t\t|\t\t\t\t\t\t\t     ***********************\n\t\t\t\t|\t\t\t\t\t\t\t\t\t|\n\t\t\t\t|\t\t\t\t\t\t\t\t\t|");
+                            "\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t\t     ***********************\n\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t\t\t\t|\n\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t\t\t\t|");
                 }
             } else {
-                System.out.println("\t\t\t\t|\t\t\t ***********************\t\t\t|"); // Celestial Shores
-                System.out.println("\t\t\t\t|\t\t\t *                     *\t\t\t|");
+                System.out.println("\t\t\t\t\t\t\t\t\t|\t\t\t ***********************\t\t\t|"); // Celestial
+                                                                                                // Shores
+                System.out.println("\t\t\t\t\t\t\t\t\t|\t\t\t *                     *\t\t\t|");
                 System.out
-                        .println("\t\t\t\t ----------------------> *   " + islands[i] + "  * <----------------------");
-                System.out.println("\t\t\t\t\t\t\t *                     *");
-                System.out.println("\t\t\t\t\t\t\t ***********************");
+                        .println("\t\t\t\t\t\t\t\t\t ----------------------> *   " + islands[i]
+                                + "  * <----------------------");
+                System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t *                     *");
+                System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t ***********************");
 
             }
         }
@@ -64,290 +126,340 @@ class MainMap {
 
 class updatedMap {
     public static void Autumnvale() { // AUTUMNVALE
-        System.out.println("\n\n\t\t\t\t\t\t\t           MAP\n");
+        System.out.println("\n");
+        System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t███╗   ███╗ █████╗ ██████╗ ");
+        System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t████╗ ████║██╔══██╗██╔══██╗");
+        System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t██╔████╔██║███████║██████╔╝");
+        System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t██║╚██╔╝██║██╔══██║██╔═══╝ ");
+        System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t██║ ╚═╝ ██║██║  ██║██║");
+        System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t╚═╝     ╚═╝╚═╝  ╚═╝╚═╝\n");
         String[] islands = { "Imber Cove", "Autumnvale", "Frostpeak", "Kindlewood", "Aquaville", "Celestial Shores" };
         for (int i = 0; i < islands.length; i++) {
             if (i == 0) {
-                System.out.println("\t\t\t\t\t\t\t ***********************"); // Imber Cove
-                System.out.println("\t\t\t\t\t\t\t *                     *");
+                System.out.println("\n\n\t\t\t\t\t\t\t\t\t\t\t\t ***********************"); // Imber Cove
+                System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t *                     *");
                 System.out.println(
-                        "\t\t\t\t ------------------------*     " + islands[i] + "      * -----------------------");
-                System.out.println("\t\t\t\t|\t\t\t *                     *\t\t\t|");
-                System.out.println("\t\t\t\t|\t\t\t ***********************\t\t\t|");
-                System.out.print("\t\t\t\t|\t\t\t\t\t\t\t\t\t|\n\t\t\t\tv\t\t\t\t\t\t\t\t\t|\n");
+                        "\t\t\t\t\t\t\t\t\t ------------------------*     " + islands[i]
+                                + "      * -----------------------");
+                System.out.println("\t\t\t\t\t\t\t\t\t|\t\t\t *                     *\t\t\t|");
+                System.out.println("\t\t\t\t\t\t\t\t\t|\t\t\t ***********************\t\t\t|");
+                System.out.print("\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t\t\t\t|\n\t\t\t\t\t\t\t\t\tv\t\t\t\t\t\t\t\t\t|\n");
 
             } else if (i == 1) {
-                System.out.println("\t\t     ***********************\t\t\t\t\t\t\t\t|"); // Autumvale
-                System.out.println("\t\t     *                     *\t\t\t\t\t\t\t\t|");
-                System.out.println("     You're here!    *     " + islands[i] + "      * ------\t\t\t\t\t\t\t|");
-                System.out.println("\t\t     *                     *      -------\t\t\t\t\t\t|");
+                System.out.println("\t\t\t\t\t\t\t     ***********************\t\t\t\t\t\t\t\t|"); // Autumvale
+                System.out.println("\t\t\t\t\t\t\t     *                     *\t\t\t\t\t\t\t\t|");
                 System.out.println(
-                        "\t\t     ***********************\t\t-------\t\t\t\t\t\t|\n\t\t\t\t|\t\t\t      ------\t\t\t\t\t|\n\t\t\t\t|\t\t\t\t    ------\t\t\t\t|");
+                        "\t\t\t\t\t    You're here!     *     " + islands[i] + "     * ------\t\t\t\t\t\t\t|");
+                System.out.println("\t\t\t\t\t\t\t     *                     *      -------\t\t\t\t\t\t|");
+                System.out.println(
+                        "\t\t\t\t\t\t\t     ***********************\t\t-------\t\t\t\t\t\t|\n\t\t\t\t\t\t\t\t\t|\t\t\t      ------\t\t\t\t\t|\n\t\t\t\t\t\t\t\t\t|\t\t\t\t    ------\t\t\t\t|");
 
             } else if (i == 3) {
-                System.out.println("\t\t     ***********************\t\t\t\t\t\t\t\t|"); // Kindlewood
-                System.out.println("\t\t     *                     *\t\t\t\t\t\t\t\t|");
-                System.out.println("\t\t     *     " + islands[i] + "      * ------\t\t\t\t\t\t\t|");
-                System.out.println("\t\t     *                     *      -------\t\t\t\t\t\t|");
+                System.out.println("\t\t\t\t\t\t\t     ***********************\t\t\t\t\t\t\t\t|"); // Kindlewood
+                System.out.println("\t\t\t\t\t\t\t     *                     *\t\t\t\t\t\t\t\t|");
+                System.out.println("\t\t\t\t\t\t\t     *     " + islands[i] + "     * ------\t\t\t\t\t\t\t|");
+                System.out.println("\t\t\t\t\t\t\t     *                     *      -------\t\t\t\t\t\t|");
                 System.out.println(
-                        "\t\t     ***********************\t\t-------\t\t\t\t\t\t|\n\t\t\t\t|\t\t\t      ------\t\t\t\t\t|\n\t\t\t\t|\t\t\t\t    ------\t\t\t\t|");
+                        "\t\t\t\t\t\t\t     ***********************\t\t-------\t\t\t\t\t\t|\n\t\t\t\t\t\t\t\t\t|\t\t\t      ------\t\t\t\t\t|\n\t\t\t\t\t\t\t\t\t|\t\t\t\t    ------\t\t\t\t|");
 
             } else if (i % 2 == 0) {
                 if (i == 2) {
-                    System.out.println("\t\t\t\t|\t\t\t\t\t  -------\t     ***********************"); // Frostpeak
-                    System.out.println("\t\t\t\t|\t\t\t\t\t        -------      *                     *");
-                    System.out.println("\t\t\t\t|\t\t\t\t\t\t      ------ *      " + islands[i] + "      *");
-                    System.out.println("\t\t\t\t|\t\t\t\t\t\t\t     *                     *");
+                    System.out.println("\t\t\t\t\t\t\t\t\t|\t\t\t\t\t  -------\t     ***********************"); // Frostpeak
+                    System.out.println("\t\t\t\t\t\t\t\t\t|\t\t\t\t\t        -------      *                     *");
                     System.out.println(
-                            "\t\t\t\t|\t\t\t\t\t\t\t     ***********************\n\t\t\t\t|\t\t\t\t\t\t\t\t\t|\n\t\t\t\t|\t\t\t\t\t\t\t\t\t|");
+                            "\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t      ------ *      " + islands[i] + "      *");
+                    System.out.println("\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t\t     *                     *");
+                    System.out.println(
+                            "\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t\t     ***********************\n\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t\t\t\t|\n\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t\t\t\t|");
                 } else if (i == 4) {
-                    System.out.println("\t\t\t\t|\t\t\t\t\t  -------\t     ***********************"); // Aquaville
-                    System.out.println("\t\t\t\t|\t\t\t\t\t        -------      *                     *");
-                    System.out.println("\t\t\t\t|\t\t\t\t\t\t      ------ *      " + islands[i] + "      *");
-                    System.out.println("\t\t\t\t|\t\t\t\t\t\t\t     *                     *");
+                    System.out.println("\t\t\t\t\t\t\t\t\t|\t\t\t\t\t  -------\t     ***********************"); // Aquaville
+                    System.out.println("\t\t\t\t\t\t\t\t\t|\t\t\t\t\t        -------      *                     *");
+                    System.out.println("\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t      ------ *      " + islands[i] + "      *");
+                    System.out.println("\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t             *                     *");
                     System.out.println(
-                            "\t\t\t\t|\t\t\t\t\t\t\t     ***********************\n\t\t\t\t|\t\t\t\t\t\t\t\t\t|\n\t\t\t\t|\t\t\t\t\t\t\t\t\t|");
+                            "\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t\t     ***********************\n\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t\t\t\t|\n\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t\t\t\t|");
                 }
-
             } else {
-                System.out.println("\t\t\t\t|\t\t\t ***********************\t\t\t|"); // Celestial Shores
-                System.out.println("\t\t\t\t|\t\t\t *                     *\t\t\t|");
+                System.out.println("\t\t\t\t\t\t\t\t\t|\t\t\t ***********************\t\t\t|"); // Celestial
+                                                                                                // Shores
+                System.out.println("\t\t\t\t\t\t\t\t\t|\t\t\t *                     *\t\t\t|");
                 System.out
-                        .println("\t\t\t\t ----------------------> *   " + islands[i] + "  * <----------------------");
-                System.out.println("\t\t\t\t\t\t\t *                     *");
-                System.out.println("\t\t\t\t\t\t\t ***********************");
+                        .println("\t\t\t\t\t\t\t\t\t ----------------------> *   " + islands[i]
+                                + "  * <----------------------");
+                System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t *                     *");
+                System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t ***********************");
+
             }
         }
     }
 
     public static void Frostpeak() {
-        System.out.println("\n\n\t\t\t\t\t\t\t           MAP\n");
+        System.out.println("\n");
+        System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t███╗   ███╗ █████╗ ██████╗ ");
+        System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t████╗ ████║██╔══██╗██╔══██╗");
+        System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t██╔████╔██║███████║██████╔╝");
+        System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t██║╚██╔╝██║██╔══██║██╔═══╝ ");
+        System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t██║ ╚═╝ ██║██║  ██║██║");
+        System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t╚═╝     ╚═╝╚═╝  ╚═╝╚═╝\n");
         String[] islands = { "Imber Cove", "Autumnvale", "Frostpeak", "Kindlewood", "Aquaville", "Celestial Shores" };
         for (int i = 0; i < islands.length; i++) {
             if (i == 0) {
-                System.out.println("\t\t\t\t\t\t\t ***********************"); // Imber Cove
-                System.out.println("\t\t\t\t\t\t\t *                     *");
+                System.out.println("\n\n\t\t\t\t\t\t\t\t\t\t\t\t ***********************"); // Imber Cove
+                System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t *                     *");
                 System.out.println(
-                        "\t\t\t\t ------------------------*     " + islands[i] + "      * -----------------------");
-                System.out.println("\t\t\t\t|\t\t\t *                     *\t\t\t|");
-                System.out.println("\t\t\t\t|\t\t\t ***********************\t\t\t|");
-                System.out.print("\t\t\t\t|\t\t\t\t\t\t\t\t\t|\n\t\t\t\tv\t\t\t\t\t\t\t\t\t|\n");
+                        "\t\t\t\t\t\t\t\t\t ------------------------*     " + islands[i]
+                                + "      * -----------------------");
+                System.out.println("\t\t\t\t\t\t\t\t\t|\t\t\t *                     *\t\t\t|");
+                System.out.println("\t\t\t\t\t\t\t\t\t|\t\t\t ***********************\t\t\t|");
+                System.out.print("\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t\t\t\t|\n\t\t\t\t\t\t\t\t\tv\t\t\t\t\t\t\t\t\t|\n");
 
             } else if (i == 1) {
-                System.out.println("\t\t     ***********************\t\t\t\t\t\t\t\t|"); // Autumvale
-                System.out.println("\t\t     *                     *\t\t\t\t\t\t\t\t|");
-                System.out.println("\t\t     *     " + islands[i] + "      * ------\t\t\t\t\t\t\t|");
-                System.out.println("\t\t     *                     *      -------\t\t\t\t\t\t|");
+                System.out.println("\t\t\t\t\t\t\t     ***********************\t\t\t\t\t\t\t\t|"); // Autumvale
+                System.out.println("\t\t\t\t\t\t\t     *                     *\t\t\t\t\t\t\t\t|");
+                System.out.println("\t\t\t\t\t\t\t     *     " + islands[i] + "     * ------\t\t\t\t\t\t\t|");
+                System.out.println("\t\t\t\t\t\t\t     *                     *      -------\t\t\t\t\t\t|");
                 System.out.println(
-                        "\t\t     ***********************\t\t-------\t\t\t\t\t\t|\n\t\t\t\t|\t\t\t      ------\t\t\t\t\t|\n\t\t\t\t|\t\t\t\t    ------\t\t\t\t|");
+                        "\t\t\t\t\t\t\t     ***********************\t\t-------\t\t\t\t\t\t|\n\t\t\t\t\t\t\t\t\t|\t\t\t      ------\t\t\t\t\t|\n\t\t\t\t\t\t\t\t\t|\t\t\t\t    ------\t\t\t\t|");
 
             } else if (i == 3) {
-                System.out.println("\t\t     ***********************\t\t\t\t\t\t\t\t|"); // Kindlewood
-                System.out.println("\t\t     *                     *\t\t\t\t\t\t\t\t|");
-                System.out.println("\t\t     *     " + islands[i] + "      * ------\t\t\t\t\t\t\t|");
-                System.out.println("\t\t     *                     *      -------\t\t\t\t\t\t|");
+                System.out.println("\t\t\t\t\t\t\t     ***********************\t\t\t\t\t\t\t\t|"); // Kindlewood
+                System.out.println("\t\t\t\t\t\t\t     *                     *\t\t\t\t\t\t\t\t|");
+                System.out.println("\t\t\t\t\t\t\t     *     " + islands[i] + "     * ------\t\t\t\t\t\t\t|");
+                System.out.println("\t\t\t\t\t\t\t     *                     *      -------\t\t\t\t\t\t|");
                 System.out.println(
-                        "\t\t     ***********************\t\t-------\t\t\t\t\t\t|\n\t\t\t\t|\t\t\t      ------\t\t\t\t\t|\n\t\t\t\t|\t\t\t\t    ------\t\t\t\t|");
+                        "\t\t\t\t\t\t\t     ***********************\t\t-------\t\t\t\t\t\t|\n\t\t\t\t\t\t\t\t\t|\t\t\t      ------\t\t\t\t\t|\n\t\t\t\t\t\t\t\t\t|\t\t\t\t    ------\t\t\t\t|");
 
             } else if (i % 2 == 0) {
                 if (i == 2) {
-                    System.out.println("\t\t\t\t|\t\t\t\t\t  -------\t     ***********************"); // Frostpeak
-                    System.out.println("\t\t\t\t|\t\t\t\t\t        -------      *                     *");
+                    System.out.println("\t\t\t\t\t\t\t\t\t|\t\t\t\t\t  -------\t     ***********************"); // Frostpeak
+                    System.out.println("\t\t\t\t\t\t\t\t\t|\t\t\t\t\t        -------      *                     *");
                     System.out.println(
-                            "\t\t\t\t|\t\t\t\t\t\t      ------ *      " + islands[i] + "      *      You're here!");
-
-                    System.out.println("\t\t\t\t|\t\t\t\t\t\t\t     *                     *");
+                            "\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t      ------ *      " + islands[i]
+                                    + "      *    You're here!");
+                    System.out.println("\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t\t     *                     *");
                     System.out.println(
-                            "\t\t\t\t|\t\t\t\t\t\t\t     ***********************\n\t\t\t\t|\t\t\t\t\t\t\t\t\t|\n\t\t\t\t|\t\t\t\t\t\t\t\t\t|");
+                            "\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t\t     ***********************\n\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t\t\t\t|\n\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t\t\t\t|");
                 } else if (i == 4) {
-                    System.out.println("\t\t\t\t|\t\t\t\t\t  -------\t     ***********************"); // Aquaville
-                    System.out.println("\t\t\t\t|\t\t\t\t\t        -------      *                     *");
-                    System.out.println("\t\t\t\t|\t\t\t\t\t\t      ------ *      " + islands[i] + "      *");
-                    System.out.println("\t\t\t\t|\t\t\t\t\t\t\t     *                     *");
+                    System.out.println("\t\t\t\t\t\t\t\t\t|\t\t\t\t\t  -------\t     ***********************"); // Aquaville
+                    System.out.println("\t\t\t\t\t\t\t\t\t|\t\t\t\t\t        -------      *                     *");
+                    System.out.println("\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t      ------ *      " + islands[i] + "      *");
+                    System.out.println("\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t             *                     *");
                     System.out.println(
-                            "\t\t\t\t|\t\t\t\t\t\t\t     ***********************\n\t\t\t\t|\t\t\t\t\t\t\t\t\t|\n\t\t\t\t|\t\t\t\t\t\t\t\t\t|");
+                            "\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t\t     ***********************\n\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t\t\t\t|\n\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t\t\t\t|");
                 }
-
             } else {
-                System.out.println("\t\t\t\t|\t\t\t ***********************\t\t\t|"); // Celestial Shores
-                System.out.println("\t\t\t\t|\t\t\t *                     *\t\t\t|");
+                System.out.println("\t\t\t\t\t\t\t\t\t|\t\t\t ***********************\t\t\t|"); // Celestial
+                                                                                                // Shores
+                System.out.println("\t\t\t\t\t\t\t\t\t|\t\t\t *                     *\t\t\t|");
                 System.out
-                        .println("\t\t\t\t ----------------------> *   " + islands[i] + "  * <----------------------");
-                System.out.println("\t\t\t\t\t\t\t *                     *");
-                System.out.println("\t\t\t\t\t\t\t ***********************");
+                        .println("\t\t\t\t\t\t\t\t\t ----------------------> *   " + islands[i]
+                                + "  * <----------------------");
+                System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t *                     *");
+                System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t ***********************");
+
             }
         }
     }
 
     public static void Kindlewood() {
-        System.out.println("\n\n\t\t\t\t\t\t\t           MAP\n");
+        System.out.println("\n");
+        System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t███╗   ███╗ █████╗ ██████╗ ");
+        System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t████╗ ████║██╔══██╗██╔══██╗");
+        System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t██╔████╔██║███████║██████╔╝");
+        System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t██║╚██╔╝██║██╔══██║██╔═══╝ ");
+        System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t██║ ╚═╝ ██║██║  ██║██║");
+        System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t╚═╝     ╚═╝╚═╝  ╚═╝╚═╝\n");
         String[] islands = { "Imber Cove", "Autumnvale", "Frostpeak", "Kindlewood", "Aquaville", "Celestial Shores" };
         for (int i = 0; i < islands.length; i++) {
             if (i == 0) {
-                System.out.println("\t\t\t\t\t\t\t ***********************"); // Imber Cove
-                System.out.println("\t\t\t\t\t\t\t *                     *");
+                System.out.println("\n\n\t\t\t\t\t\t\t\t\t\t\t\t ***********************"); // Imber Cove
+                System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t *                     *");
                 System.out.println(
-                        "\t\t\t\t ------------------------*     " + islands[i] + "      * -----------------------");
-                System.out.println("\t\t\t\t|\t\t\t *                     *\t\t\t|");
-                System.out.println("\t\t\t\t|\t\t\t ***********************\t\t\t|");
-                System.out.print("\t\t\t\t|\t\t\t\t\t\t\t\t\t|\n\t\t\t\tv\t\t\t\t\t\t\t\t\t|\n");
+                        "\t\t\t\t\t\t\t\t\t ------------------------*     " + islands[i]
+                                + "      * -----------------------");
+                System.out.println("\t\t\t\t\t\t\t\t\t|\t\t\t *                     *\t\t\t|");
+                System.out.println("\t\t\t\t\t\t\t\t\t|\t\t\t ***********************\t\t\t|");
+                System.out.print("\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t\t\t\t|\n\t\t\t\t\t\t\t\t\tv\t\t\t\t\t\t\t\t\t|\n");
 
             } else if (i == 1) {
-                System.out.println("\t\t     ***********************\t\t\t\t\t\t\t\t|"); // Autumvale
-                System.out.println("\t\t     *                     *\t\t\t\t\t\t\t\t|");
-                System.out.println("\t\t     *     " + islands[i] + "      * ------\t\t\t\t\t\t\t|");
-                System.out.println("\t\t     *                     *      -------\t\t\t\t\t\t|");
+                System.out.println("\t\t\t\t\t\t\t     ***********************\t\t\t\t\t\t\t\t|"); // Autumvale
+                System.out.println("\t\t\t\t\t\t\t     *                     *\t\t\t\t\t\t\t\t|");
+                System.out.println("\t\t\t\t\t\t\t     *     " + islands[i] + "     * ------\t\t\t\t\t\t\t|");
+                System.out.println("\t\t\t\t\t\t\t     *                     *      -------\t\t\t\t\t\t|");
                 System.out.println(
-                        "\t\t     ***********************\t\t-------\t\t\t\t\t\t|\n\t\t\t\t|\t\t\t      ------\t\t\t\t\t|\n\t\t\t\t|\t\t\t\t    ------\t\t\t\t|");
+                        "\t\t\t\t\t\t\t     ***********************\t\t-------\t\t\t\t\t\t|\n\t\t\t\t\t\t\t\t\t|\t\t\t      ------\t\t\t\t\t|\n\t\t\t\t\t\t\t\t\t|\t\t\t\t    ------\t\t\t\t|");
 
             } else if (i == 3) {
-                System.out.println("\t\t     ***********************\t\t\t\t\t\t\t\t|"); // Kindlewood
-                System.out.println("\t\t     *                     *\t\t\t\t\t\t\t\t|");
-                System.out.println("     You're here!    *     " + islands[i] + "      * ------\t\t\t\t\t\t\t|");
-                System.out.println("\t\t     *                     *      -------\t\t\t\t\t\t|");
+                System.out.println("\t\t\t\t\t\t\t     ***********************\t\t\t\t\t\t\t\t|"); // Kindlewood
+                System.out.println("\t\t\t\t\t\t\t     *                     *\t\t\t\t\t\t\t\t|");
                 System.out.println(
-                        "\t\t     ***********************\t\t-------\t\t\t\t\t\t|\n\t\t\t\t|\t\t\t      ------\t\t\t\t\t|\n\t\t\t\t|\t\t\t\t    ------\t\t\t\t|");
+                        "\t\t\t\t\t    You're here!     *     " + islands[i] + "      * ------\t\t\t\t\t\t\t|");
+                System.out.println("\t\t\t\t\t\t\t     *                     *      -------\t\t\t\t\t\t|");
+                System.out.println(
+                        "\t\t\t\t\t\t\t     ***********************\t\t-------\t\t\t\t\t\t|\n\t\t\t\t\t\t\t\t\t|\t\t\t      ------\t\t\t\t\t|\n\t\t\t\t\t\t\t\t\t|\t\t\t\t    ------\t\t\t\t|");
 
             } else if (i % 2 == 0) {
                 if (i == 2) {
-                    System.out.println("\t\t\t\t|\t\t\t\t\t  -------\t     ***********************"); // Frostpeak
-                    System.out.println("\t\t\t\t|\t\t\t\t\t        -------      *                     *");
-                    System.out.println("\t\t\t\t|\t\t\t\t\t\t      ------ *      " + islands[i] + "      *");
-                    System.out.println("\t\t\t\t|\t\t\t\t\t\t\t     *                     *");
+                    System.out.println("\t\t\t\t\t\t\t\t\t|\t\t\t\t\t  -------\t     ***********************"); // Frostpeak
+                    System.out.println("\t\t\t\t\t\t\t\t\t|\t\t\t\t\t        -------      *                     *");
                     System.out.println(
-                            "\t\t\t\t|\t\t\t\t\t\t\t     ***********************\n\t\t\t\t|\t\t\t\t\t\t\t\t\t|\n\t\t\t\t|\t\t\t\t\t\t\t\t\t|");
+                            "\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t      ------ *      " + islands[i] + "      *");
+                    System.out.println("\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t\t     *                     *");
+                    System.out.println(
+                            "\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t\t     ***********************\n\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t\t\t\t|\n\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t\t\t\t|");
                 } else if (i == 4) {
-                    System.out.println("\t\t\t\t|\t\t\t\t\t  -------\t     ***********************"); // Aquaville
-                    System.out.println("\t\t\t\t|\t\t\t\t\t        -------      *                     *");
-                    System.out.println("\t\t\t\t|\t\t\t\t\t\t      ------ *      " + islands[i] + "      *");
-                    System.out.println("\t\t\t\t|\t\t\t\t\t\t\t     *                     *");
+                    System.out.println("\t\t\t\t\t\t\t\t\t|\t\t\t\t\t  -------\t     ***********************"); // Aquaville
+                    System.out.println("\t\t\t\t\t\t\t\t\t|\t\t\t\t\t        -------      *                     *");
+                    System.out.println("\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t      ------ *      " + islands[i] + "      *");
+                    System.out.println("\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t             *                     *");
                     System.out.println(
-                            "\t\t\t\t|\t\t\t\t\t\t\t     ***********************\n\t\t\t\t|\t\t\t\t\t\t\t\t\t|\n\t\t\t\t|\t\t\t\t\t\t\t\t\t|");
+                            "\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t\t     ***********************\n\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t\t\t\t|\n\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t\t\t\t|");
                 }
-
             } else {
-                System.out.println("\t\t\t\t|\t\t\t ***********************\t\t\t|"); // Celestial Shores
-                System.out.println("\t\t\t\t|\t\t\t *                     *\t\t\t|");
+                System.out.println("\t\t\t\t\t\t\t\t\t|\t\t\t ***********************\t\t\t|"); // Celestial
+                                                                                                // Shores
+                System.out.println("\t\t\t\t\t\t\t\t\t|\t\t\t *                     *\t\t\t|");
                 System.out
-                        .println("\t\t\t\t ----------------------> *   " + islands[i] + "  * <----------------------");
-                System.out.println("\t\t\t\t\t\t\t *                     *");
-                System.out.println("\t\t\t\t\t\t\t ***********************");
+                        .println("\t\t\t\t\t\t\t\t\t ----------------------> *   " + islands[i]
+                                + "  * <----------------------");
+                System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t *                     *");
+                System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t ***********************");
+
             }
         }
     }
 
     public static void Aquaville() {
-        System.out.println("\n\n\t\t\t\t\t\t\t           MAP\n");
+        System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t███╗   ███╗ █████╗ ██████╗ ");
+        System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t████╗ ████║██╔══██╗██╔══██╗");
+        System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t██╔████╔██║███████║██████╔╝");
+        System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t██║╚██╔╝██║██╔══██║██╔═══╝ ");
+        System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t██║ ╚═╝ ██║██║  ██║██║");
+        System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t╚═╝     ╚═╝╚═╝  ╚═╝╚═╝\n");
         String[] islands = { "Imber Cove", "Autumnvale", "Frostpeak", "Kindlewood", "Aquaville", "Celestial Shores" };
         for (int i = 0; i < islands.length; i++) {
             if (i == 0) {
-                System.out.println("\t\t\t\t\t\t\t ***********************"); // Imber Cove
-                System.out.println("\t\t\t\t\t\t\t *                     *");
+                System.out.println("\n\n\t\t\t\t\t\t\t\t\t\t\t\t ***********************"); // Imber Cove
+                System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t *                     *");
                 System.out.println(
-                        "\t\t\t\t ------------------------*     " + islands[i] + "      * -----------------------");
-                System.out.println("\t\t\t\t|\t\t\t *                     *\t\t\t|");
-                System.out.println("\t\t\t\t|\t\t\t ***********************\t\t\t|");
-                System.out.print("\t\t\t\t|\t\t\t\t\t\t\t\t\t|\n\t\t\t\tv\t\t\t\t\t\t\t\t\t|\n");
+                        "\t\t\t\t\t\t\t\t\t ------------------------*     " + islands[i]
+                                + "      * -----------------------");
+                System.out.println("\t\t\t\t\t\t\t\t\t|\t\t\t *                     *\t\t\t|");
+                System.out.println("\t\t\t\t\t\t\t\t\t|\t\t\t ***********************\t\t\t|");
+                System.out.print("\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t\t\t\t|\n\t\t\t\t\t\t\t\t\tv\t\t\t\t\t\t\t\t\t|\n");
 
             } else if (i == 1) {
-                System.out.println("\t\t     ***********************\t\t\t\t\t\t\t\t|"); // Autumvale
-                System.out.println("\t\t     *                     *\t\t\t\t\t\t\t\t|");
-                System.out.println("\t\t     *     " + islands[i] + "      * ------\t\t\t\t\t\t\t|");
-                System.out.println("\t\t     *                     *      -------\t\t\t\t\t\t|");
+                System.out.println("\t\t\t\t\t\t\t     ***********************\t\t\t\t\t\t\t\t|"); // Autumvale
+                System.out.println("\t\t\t\t\t\t\t     *                     *\t\t\t\t\t\t\t\t|");
+                System.out.println("\t\t\t\t\t\t\t     *     " + islands[i] + "     * ------\t\t\t\t\t\t\t|");
+                System.out.println("\t\t\t\t\t\t\t     *                     *      -------\t\t\t\t\t\t|");
                 System.out.println(
-                        "\t\t     ***********************\t\t-------\t\t\t\t\t\t|\n\t\t\t\t|\t\t\t      ------\t\t\t\t\t|\n\t\t\t\t|\t\t\t\t    ------\t\t\t\t|");
+                        "\t\t\t\t\t\t\t     ***********************\t\t-------\t\t\t\t\t\t|\n\t\t\t\t\t\t\t\t\t|\t\t\t      ------\t\t\t\t\t|\n\t\t\t\t\t\t\t\t\t|\t\t\t\t    ------\t\t\t\t|");
 
             } else if (i == 3) {
-                System.out.println("\t\t     ***********************\t\t\t\t\t\t\t\t|"); // Kindlewood
-                System.out.println("\t\t     *                     *\t\t\t\t\t\t\t\t|");
-                System.out.println("\t\t     *     " + islands[i] + "      * ------\t\t\t\t\t\t\t|");
-                System.out.println("\t\t     *                     *      -------\t\t\t\t\t\t|");
+                System.out.println("\t\t\t\t\t\t\t     ***********************\t\t\t\t\t\t\t\t|"); // Kindlewood
+                System.out.println("\t\t\t\t\t\t\t     *                     *\t\t\t\t\t\t\t\t|");
+                System.out.println("\t\t\t\t\t\t\t     *     " + islands[i] + "     * ------\t\t\t\t\t\t\t|");
+                System.out.println("\t\t\t\t\t\t\t     *                     *      -------\t\t\t\t\t\t|");
                 System.out.println(
-                        "\t\t     ***********************\t\t-------\t\t\t\t\t\t|\n\t\t\t\t|\t\t\t      ------\t\t\t\t\t|\n\t\t\t\t|\t\t\t\t    ------\t\t\t\t|");
+                        "\t\t\t\t\t\t\t     ***********************\t\t-------\t\t\t\t\t\t|\n\t\t\t\t\t\t\t\t\t|\t\t\t      ------\t\t\t\t\t|\n\t\t\t\t\t\t\t\t\t|\t\t\t\t    ------\t\t\t\t|");
 
             } else if (i % 2 == 0) {
                 if (i == 2) {
-                    System.out.println("\t\t\t\t|\t\t\t\t\t  -------\t     ***********************"); // Frostpeak
-                    System.out.println("\t\t\t\t|\t\t\t\t\t        -------      *                     *");
-                    System.out.println("\t\t\t\t|\t\t\t\t\t\t      ------ *      " + islands[i] + "      *");
-                    System.out.println("\t\t\t\t|\t\t\t\t\t\t\t     *                     *");
+                    System.out.println("\t\t\t\t\t\t\t\t\t|\t\t\t\t\t  -------\t     ***********************"); // Frostpeak
+                    System.out.println("\t\t\t\t\t\t\t\t\t|\t\t\t\t\t        -------      *                     *");
+                    System.out.println("\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t      ------ *      " + islands[i] + "      *");
+                    System.out.println("\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t\t     *                     *");
                     System.out.println(
-                            "\t\t\t\t|\t\t\t\t\t\t\t     ***********************\n\t\t\t\t|\t\t\t\t\t\t\t\t\t|\n\t\t\t\t|\t\t\t\t\t\t\t\t\t|");
+                            "\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t\t     ***********************\n\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t\t\t\t|\n\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t\t\t\t|");
                 } else if (i == 4) {
-                    System.out.println("\t\t\t\t|\t\t\t\t\t  -------\t     ***********************"); // Aquaville
-                    System.out.println("\t\t\t\t|\t\t\t\t\t        -------      *                     *");
+                    System.out.println("\t\t\t\t\t\t\t\t\t|\t\t\t\t\t  -------\t     ***********************"); // Aquaville
+                    System.out.println("\t\t\t\t\t\t\t\t\t|\t\t\t\t\t        -------      *                     *");
                     System.out.println(
-                            "\t\t\t\t|\t\t\t\t\t\t      ------ *      " + islands[i] + "      *      You're here!");
-                    System.out.println("\t\t\t\t|\t\t\t\t\t\t\t     *                     *");
+                            "\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t      ------ *      " + islands[i]
+                                    + "      *    You're here!");
+                    System.out.println("\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t             *                     *");
                     System.out.println(
-                            "\t\t\t\t|\t\t\t\t\t\t\t     ***********************\n\t\t\t\t|\t\t\t\t\t\t\t\t\t|\n\t\t\t\t|\t\t\t\t\t\t\t\t\t|");
+                            "\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t\t     ***********************\n\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t\t\t\t|\n\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t\t\t\t|");
                 }
-
             } else {
-                System.out.println("\t\t\t\t|\t\t\t ***********************\t\t\t|"); // Celestial Shores
-                System.out.println("\t\t\t\t|\t\t\t *                     *\t\t\t|");
+                System.out.println("\t\t\t\t\t\t\t\t\t|\t\t\t ***********************\t\t\t|"); // Celestial
+                                                                                                // Shores
+                System.out.println("\t\t\t\t\t\t\t\t\t|\t\t\t *                     *\t\t\t|");
                 System.out
-                        .println("\t\t\t\t ----------------------> *   " + islands[i] + "  * <----------------------");
-                System.out.println("\t\t\t\t\t\t\t *                     *");
-                System.out.println("\t\t\t\t\t\t\t ***********************");
+                        .println("\t\t\t\t\t\t\t\t\t ----------------------> *   " + islands[i]
+                                + "  * <----------------------");
+                System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t *                     *");
+                System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t ***********************");
+
             }
         }
     }
 
     public static void CelestialShores() {
-        System.out.println("\n\n\t\t\t\t\t\t\t           MAP\n");
-        String[] islands = { "Imber Cove", "Autumnvale", "Frostpeak", "Kindlewood", "Aquaville", "Celestial Shores" };
+        System.out.println("\n");
+        System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t███╗   ███╗ █████╗ ██████╗ ");
+        System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t████╗ ████║██╔══██╗██╔══██╗");
+        System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t██╔████╔██║███████║██████╔╝");
+        System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t██║╚██╔╝██║██╔══██║██╔═══╝ ");
+        System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t██║ ╚═╝ ██║██║  ██║██║");
+        System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t╚═╝     ╚═╝╚═╝  ╚═╝╚═╝\n");
+        String[] islands = { "Imber Cove", "Autumnvale ", "Frostpeak", "Kindlewood ", "Aquaville", "Celestial Shores" };
         for (int i = 0; i < islands.length; i++) {
             if (i == 0) {
-                System.out.println("\t\t\t\t\t\t\t ***********************"); // Imber Cove
-                System.out.println("\t\t\t\t\t\t\t *                     *");
+                System.out.println("\n\n\t\t\t\t\t\t\t\t\t\t\t\t ***********************"); // Imber Cove
+                System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t *                     *");
                 System.out.println(
-                        "\t\t\t\t ------------------------*     " + islands[i] + "      * -----------------------");
-                System.out.println("\t\t\t\t|\t\t\t *                     *\t\t\t|");
-                System.out.println("\t\t\t\t|\t\t\t ***********************\t\t\t|");
-                System.out.print("\t\t\t\t|\t\t\t\t\t\t\t\t\t|\n\t\t\t\tv\t\t\t\t\t\t\t\t\t|\n");
+                        "\t\t\t\t\t\t\t\t\t ------------------------*     " + islands[i]
+                                + "      * -----------------------");
+                System.out.println("\t\t\t\t\t\t\t\t\t|\t\t\t *                     *\t\t\t|");
+                System.out.println("\t\t\t\t\t\t\t\t\t|\t\t\t ***********************\t\t\t|");
+                System.out.print("\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t\t\t\t|\n\t\t\t\t\t\t\t\t\tv\t\t\t\t\t\t\t\t\t|\n");
 
             } else if (i == 1) {
-                System.out.println("\t\t     ***********************\t\t\t\t\t\t\t\t|"); // Autumvale
-                System.out.println("\t\t     *                     *\t\t\t\t\t\t\t\t|");
-                System.out.println("\t\t     *     " + islands[i] + "      * ------\t\t\t\t\t\t\t|");
-                System.out.println("\t\t     *                     *      -------\t\t\t\t\t\t|");
+                System.out.println("\t\t\t\t\t\t\t     ***********************\t\t\t\t\t\t\t\t|"); // Autumvale
+                System.out.println("\t\t\t\t\t\t\t     *                     *\t\t\t\t\t\t\t\t|");
+                System.out.println("\t\t\t\t\t\t\t     *     " + islands[i] + "     * ------\t\t\t\t\t\t\t|");
+                System.out.println("\t\t\t\t\t\t\t     *                     *      -------\t\t\t\t\t\t|");
                 System.out.println(
-                        "\t\t     ***********************\t\t-------\t\t\t\t\t\t|\n\t\t\t\t|\t\t\t      ------\t\t\t\t\t|\n\t\t\t\t|\t\t\t\t    ------\t\t\t\t|");
+                        "\t\t\t\t\t\t\t     ***********************\t\t-------\t\t\t\t\t\t|\n\t\t\t\t\t\t\t\t\t|\t\t\t      ------\t\t\t\t\t|\n\t\t\t\t\t\t\t\t\t|\t\t\t\t    ------\t\t\t\t|");
 
             } else if (i == 3) {
-                System.out.println("\t\t     ***********************\t\t\t\t\t\t\t\t|"); // Kindlewood
-                System.out.println("\t\t     *                     *\t\t\t\t\t\t\t\t|");
-                System.out.println("\t\t     *     " + islands[i] + "      * ------\t\t\t\t\t\t\t|");
-                System.out.println("\t\t     *                     *      -------\t\t\t\t\t\t|");
+                System.out.println("\t\t\t\t\t\t\t     ***********************\t\t\t\t\t\t\t\t|"); // Kindlewood
+                System.out.println("\t\t\t\t\t\t\t     *                     *\t\t\t\t\t\t\t\t|");
+                System.out.println("\t\t\t\t\t\t\t     *     " + islands[i] + "     * ------\t\t\t\t\t\t\t|");
+                System.out.println("\t\t\t\t\t\t\t     *                     *      -------\t\t\t\t\t\t|");
                 System.out.println(
-                        "\t\t     ***********************\t\t-------\t\t\t\t\t\t|\n\t\t\t\t|\t\t\t      ------\t\t\t\t\t|\n\t\t\t\t|\t\t\t\t    ------\t\t\t\t|");
+                        "\t\t\t\t\t\t\t     ***********************\t\t-------\t\t\t\t\t\t|\n\t\t\t\t\t\t\t\t\t|\t\t\t      ------\t\t\t\t\t|\n\t\t\t\t\t\t\t\t\t|\t\t\t\t    ------\t\t\t\t|");
 
             } else if (i % 2 == 0) {
                 if (i == 2) {
-                    System.out.println("\t\t\t\t|\t\t\t\t\t  -------\t     ***********************"); // Frostpeak
-                    System.out.println("\t\t\t\t|\t\t\t\t\t        -------      *                     *");
-                    System.out.println("\t\t\t\t|\t\t\t\t\t\t      ------ *      " + islands[i] + "      *");
-                    System.out.println("\t\t\t\t|\t\t\t\t\t\t\t     *                     *");
+                    System.out.println("\t\t\t\t\t\t\t\t\t|\t\t\t\t\t  -------\t     ***********************"); // Frostpeak
+                    System.out.println("\t\t\t\t\t\t\t\t\t|\t\t\t\t\t        -------      *                     *");
                     System.out.println(
-                            "\t\t\t\t|\t\t\t\t\t\t\t     ***********************\n\t\t\t\t|\t\t\t\t\t\t\t\t\t|\n\t\t\t\t|\t\t\t\t\t\t\t\t\t|");
+                            "\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t      ------ *      " + islands[i] + "      *");
+                    System.out.println("\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t\t     *                     *");
+                    System.out.println(
+                            "\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t\t     ***********************\n\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t\t\t\t|\n\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t\t\t\t|");
                 } else if (i == 4) {
-                    System.out.println("\t\t\t\t|\t\t\t\t\t  -------\t     ***********************"); // Aquaville
-                    System.out.println("\t\t\t\t|\t\t\t\t\t        -------      *                     *");
-                    System.out.println("\t\t\t\t|\t\t\t\t\t\t      ------ *      " + islands[i] + "      *");
-                    System.out.println("\t\t\t\t|\t\t\t\t\t\t\t     *                     *");
+                    System.out.println("\t\t\t\t\t\t\t\t\t|\t\t\t\t\t  -------\t     ***********************"); // Aquaville
+                    System.out.println("\t\t\t\t\t\t\t\t\t|\t\t\t\t\t        -------      *                     *");
+                    System.out.println("\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t      ------ *      " + islands[i] + "      *");
+                    System.out.println("\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t             *                     *");
                     System.out.println(
-                            "\t\t\t\t|\t\t\t\t\t\t\t     ***********************\n\t\t\t\t|\t\t\t\t\t\t\t\t\t|\n\t\t\t\t|\t\t\t\t\t\t\t\t\t|");
+                            "\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t\t     ***********************\n\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t\t\t\t|\n\t\t\t\t\t\t\t\t\t|\t\t\t\t\t\t\t\t\t|");
                 }
-
             } else {
-                System.out.println("\t\t\t\t|\t\t\t ***********************\t\t\t|"); // Celestial Shores
-                System.out.println("\t\t\t\t|\t\t\t *                     *\t\t\t|");
+                System.out.println("\t\t\t\t\t\t\t\t\t|\t\t\t ***********************\t\t\t|"); // Celestial
+                                                                                                // Shores
+                System.out.println("\t\t\t\t\t\t\t\t\t|\t\t\t *                     *\t\t\t|");
                 System.out
-                        .println("\t\t\t\t ----------------------> *   " + islands[i] + "  * <----------------------");
-                System.out.println("\t\t\t\t\t\t\t *                     *");
-                System.out.println("\t\t\t\t\t\t\t ***********************");
-                System.out.println("\n\t\t\t\t\t\t\t       You're here!     \t\t\t\n");
+                        .println("\t\t\t\t\t\t\t\t\t ----------------------> *   " + islands[i]
+                                + "  * <----------------------");
+                System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t *                     *");
+                System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t ***********************");
+                System.out.println("\n\t\t\t\t\t\t\t\t\t\t\t\t       You're here!     \t\t\t\n");
+
             }
         }
     }
@@ -429,15 +541,15 @@ class QuizGame {
     public QuizGame() {
         String[] defaultQuestions = {
                 "\n* What is the capital of France? *\n",
-                "\n* Who wrote \\'Romeo and Juliet\\'? *\n",
+                "\n* Who wrote Romeo and Juliet? *\n",
                 "\n* What is the boiling point of water in Celsius? *\n",
                 "\n* Which country is known as the Land of the Rising Sun? *\n",
-                "\n* Which planet is known as the \\'Red Planet\\'? *\n",
+                "\n* Which planet is known as the Red Planet? *\n",
                 "\n* What do we call the pattern of stars that people imagine in the sky? *\n",
-                "\n* On what continent would you find the world\\'s largest desert? *\n",
+                "\n* On what continent would you find the worlds largest desert? *\n",
                 "\n* Who was the first Disney princess? *\n",
-                "\n* Who is known as the\\'Father of Modern Physics\\'? *\n",
-                "\n* Who painted the famous artwork \\'The Last Supper\\'? *\n",
+                "\n* Who is known as the Father of Modern Physics? *\n",
+                "\n* Who painted the famous artwork The Last Supper? *\n",
                 "\n* What is the name of the little mermaid in the Disney movie? *\n",
                 "\n* What animal is known for its long neck and spots on its body? *\n",
                 "\n* In what season do leaves fall off the trees? *\n",
@@ -457,8 +569,8 @@ class QuizGame {
                 "\n* What was the name of the actor who played Jack Dawson in Titanic? *\n",
                 "\n* Which cartoon character lives in a pineapple under the sea? *\n",
                 "\n* Which popular soft drink was originally created as a medicine in the 19th century? *\n",
-                "\n* What goes up and down but doesn\\'t move? *\n",
-                "\n* What has one eye, but can\\'t see? *\n",
+                "\n* What goes up and down but does not move? *\n",
+                "\n* What has one eye, but cannot see? *\n",
                 "\n* What building has the most stories? *\n",
                 "\n* I am the beginning of everything, the end of everywhere. I'm the beginning of eternity, the end of time and space. What am I? *\n",
                 "\n* What can fill a room but takes up no space? *\n",
@@ -468,14 +580,14 @@ class QuizGame {
                 "\n* When it is alive we sing, when it is dead we clap ourhands. What is it? *\n",
                 "\n* I have no life, but I can die. What am I? *\n",
                 "\n* What kind of room has no walls, door or windows? *\n",
-                "\n* I make a loud sound when I\\'m changing. When I do change, I get bigger but weigh less. What am I? *\n",
-                "\n* It has keys, but no locks. It has space, but no room. You can enter, but can\\'t go inside. What is it? *\n",
-                "\n* I\\'m orange, I wear a green hat and I sound like a parrot. What am I? *\n",
+                "\n* I make a loud sound when I am changing. When I do change, I get bigger but weigh less. What am I? *\n",
+                "\n* It has keys, but no locks. It has space, but no room. You can enter, but cannot go inside. What is it? *\n",
+                "\n* I am orange, I wear a green hat and I sound like a parrot. What am I? *\n",
                 "\n* What thrives when you feed it but dies when you water it? *\n",
                 "\n* What has 13 hearts but no other organs? *\n",
                 "\n* What kind of ship has two mates but no captain? *\n",
                 "\n* Which word in the dictionary is spelled incorrectly? *\n",
-                "\n* What begins with an \\'e\\' and only contains one letter? *\n",
+                "\n* What begins with letter e and only contains one letter? *\n",
                 "\n* Which fish costs the most? *\n",
                 "\n* What five-letter word becomes shorter when you add two letters to it? *\n",
                 "\n* What has a face and two hands but no arms or legs? *\n",
@@ -557,8 +669,7 @@ public class GuardianOfArchipelago {
     // private static Routes ShownRoutes = new Routes();
 
     public static void main(String[] args) {
-        System.out.println("\n\nWelcome to the Guardian of Archipelago!\n");
-
+        banner.generateMAPBanner();
         Introduction();
 
         boolean continueProgram = true;
@@ -571,10 +682,10 @@ public class GuardianOfArchipelago {
                 switch (YN) {
                     case 1:
                         continueProgram = false;
-                        //Map map = new Map();
                         MainMap.map();
                         checkList();
                         Islands();
+
                         break;
                     case 2:
                         System.out.print(
@@ -749,7 +860,7 @@ public class GuardianOfArchipelago {
         Destination(location);
     }
 
-    public static void Destination(String[] locations) {
+public static void Destination(String[] locations) {
         int choice = 0;
         boolean validInput = false;
 
@@ -791,7 +902,7 @@ public class GuardianOfArchipelago {
                             ShownRoutes.ImberCovetoAutumnvale(3);
                             break;
                         default:
-                            System.out.println("Invalid input.1");
+                            System.out.println("Invalid input.");
                     }
                     // continueProgram2 = false;
                     break;
@@ -811,7 +922,7 @@ public class GuardianOfArchipelago {
                             ShownRoutes.ImberCovetoFrostpeak(3);
                             break;
                         default:
-                            System.out.println("Invalid input.2");
+                            System.out.println("Invalid input.");
                     }
                     // continueProgram2 = false;
                     break;
@@ -831,7 +942,7 @@ public class GuardianOfArchipelago {
                             ShownRoutes.ImberCovetoKindlewood(3);
                             break;
                         default:
-                            System.out.println("Invalid input.3");
+                            System.out.println("Invalid input.");
                     }
                     // continueProgram2 = false;
                     break;
@@ -852,7 +963,7 @@ public class GuardianOfArchipelago {
                             break;
                         default:
                             // continueProgram2 = true;
-                            System.out.println("Invalid input.4");
+                            System.out.println("Invalid input.");
                     }
                     // continueProgram2 = false;
                     break;
@@ -908,17 +1019,19 @@ class ShownRoutes {
                 GuardianOfArchipelago.onBoat();
                 updatedMap.Autumnvale();
                 GuardianOfArchipelago.onBoat();
-                updatedMap.Frostpeak();
-                break;
-            case 3:
-                GuardianOfArchipelago.onBoat();
-                updatedMap.Autumnvale();
-                GuardianOfArchipelago.onBoat();
                 updatedMap.Kindlewood();
                 GuardianOfArchipelago.onBoat();
                 updatedMap.Aquaville();
                 GuardianOfArchipelago.onBoat();
                 updatedMap.Frostpeak();
+
+                break;
+            case 3:
+                GuardianOfArchipelago.onBoat();
+                updatedMap.Autumnvale();
+                GuardianOfArchipelago.onBoat();
+                updatedMap.Frostpeak();
+
                 break;
             default:
                 break;
